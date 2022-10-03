@@ -1,6 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
-import { Data, TextIcon } from '../Data'
+import { Data } from '../fixtures/Data'
 import { BasicInput } from './BasicInput'
 import { Icon } from './Icon'
 import { PageComponenet } from './PageComponent'
@@ -15,7 +14,9 @@ const SearchComponent = () => {
       <div>
         <h1>{title}</h1>
         <SearchInput />
-        {textIcons.map((item) => <Icon {...item} key={item.id} />)}
+        {textIcons.map((item) => (
+          <Icon {...item} key={item.id} />
+        ))}
       </div>
     </Wrapper>
   )

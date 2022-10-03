@@ -1,20 +1,26 @@
 import styled from 'styled-components'
-import { Icon } from '../Components/Icon';
-import Logo from '../Components/Logo';
-import { StyledLink } from '../Components/StyledLink';
-import { Data } from '../Data';
+import { Icon } from '../Components/Icon'
+import Logo from '../Components/Logo'
+import { StyledLink } from '../Components/StyledLink'
+import { Data } from '../fixtures/Data'
 
 const Navigation = () => {
-  const { navbar: { textIcons } } = Data
-  
+  const {
+    navbar: { textIcons },
+  } = Data
+
   return (
     <Wrapper>
       <picture>
         <Logo />
       </picture>
 
-      {textIcons.map((item) =>  <StyledLink key={item.id} {...item} />)}
-      {textIcons.map((item) =>  <Icon key={item.id} {...item} />)}
+      {textIcons.map((item) => (
+        <StyledLink key={item.id} {...item} />
+      ))}
+      {textIcons.map((item) => (
+        <Icon key={item.id} {...item} />
+      ))}
     </Wrapper>
   )
 }

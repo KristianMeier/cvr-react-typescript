@@ -1,19 +1,21 @@
 import styled from 'styled-components'
-import { Data } from '../Data';
-import { Icon } from './Icon';
-import { PageComponenet } from './PageComponent';
+import { Data } from '../fixtures/Data'
+import { Icon } from './Icon'
+import { PageComponenet } from './PageComponent'
 
 const AboutCvr = () => {
   const {
     aboutcvr: { title, text, textIcons },
   } = Data
-  
+
   return (
     <Wrapper>
       <section>
         <h2> {title} </h2>
         <h6>{text}</h6>
-        {textIcons.map((item) =>  <Icon key={item.id} {...item} />)}
+        {textIcons.map((item) => (
+          <Icon key={item.id} {...item} />
+        ))}
       </section>
     </Wrapper>
   )

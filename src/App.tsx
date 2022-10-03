@@ -1,9 +1,8 @@
-import './App.css';
-import { Routes, Route } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-import LandingPage from './Pages/LandingPage';
-import Page from './Pages/Page';
-import Layout from './Layout/Layout';
+import { Routes, Route } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
+import LandingPage from './Pages/LandingPage'
+import Page from './Pages/Page'
+import Layout from './Layout/Layout'
 
 const App = () => (
   <BrowserRouter>
@@ -16,4 +15,4 @@ const App = () => (
   </BrowserRouter>
 )
 
-export default App;
+export default App

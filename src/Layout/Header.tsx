@@ -3,27 +3,32 @@ import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import { Icon } from '../Components/Icon'
 import { StyledLink } from '../Components/StyledLink'
-import { Data } from '../Data'
+import { Data } from '../fixtures/Data'
 
 const Header = () => {
   const {
     title: { mainTitle, earthIcon, textIcons, titleLinks },
   } = Data
-  
+
   return (
     <>
       <Wrapper>
         <h1>{mainTitle} </h1>
         <SmallLinks>
-          {earthIcon.map((item) => <Icon key={item.id} {...item} />)}
+          {earthIcon.map((item) => (
+            <Icon key={item.id} {...item} />
+          ))}
         </SmallLinks>
         <LinkText>
-          {textIcons.map((item) => <StyledLink key={item.id} {...item} />)}
+          {textIcons.map((item) => (
+            <StyledLink key={item.id} {...item} />
+          ))}
         </LinkText>
       </Wrapper>
       <Links>
-        {titleLinks.map((item) => <StyledLink linktype='top' size='1.2rem' key={item.id} {...item} />
-        )}
+        {titleLinks.map((item) => (
+          <StyledLink linktype='top' size='1.2rem' key={item.id} {...item} />
+        ))}
         <hr />
       </Links>
     </>
