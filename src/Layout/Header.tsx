@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import { Icon } from '../Components/Icon'
 import { StyledLink } from '../Components/StyledLink'
-import { Data } from '../fixtures/Data'
+import { Data } from '../Fixtures/Data'
 
 const Header = () => {
   const {

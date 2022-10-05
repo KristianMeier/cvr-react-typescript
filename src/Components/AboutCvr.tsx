@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Data } from '../fixtures/Data'
+import { Data } from '../Fixtures/Data'
 import { Icon } from './Icon'
 import { PageComponenet } from './PageComponent'
 
