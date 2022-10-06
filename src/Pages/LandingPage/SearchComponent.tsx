@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { Data } from '../Fixtures/Data'
-import { BasicInput } from './BasicInput'
-import { Icon } from './Icon'
-import { PageComponenet } from './PageComponent'
+import { Data } from '../../Fixtures/Data'
+import { Icon } from '../../Components/Icon'
+import { PageComponenet } from '../../Components/PageComponent'
+import { SearchInput } from '../../Components/SearchInput'
 
 const SearchComponent = () => {
   const {
@@ -22,10 +22,6 @@ const SearchComponent = () => {
   )
 }
 
-const SearchInput = styled(BasicInput)`
-  max-width: 15rem;
-`
-
 const Wrapper = styled(PageComponenet)`
   justify-content: right;
   align-items: center;
@@ -35,24 +31,6 @@ const Wrapper = styled(PageComponenet)`
     text-align: center;
     margin-top: 2.5rem;
     font-weight: 300;
-  }
-
-  input {
-    margin-top: 1rem;
-    padding: 1.1rem 5rem;
-    margin-right: 0.7rem;
-  }
-
-  @media (min-width: 768px) {
-    input {
-      padding: 1.1rem 10rem;
-    }
-  }
-
-  @media (min-width: 992px) {
-    input {
-      padding: 1.1rem 14rem;
-    }
   }
 
   p {

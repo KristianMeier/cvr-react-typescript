@@ -73,6 +73,7 @@ const Wrapper = styled.footer`
     justify-content: space-around;
     flex-direction: column;
     padding: 2rem 3rem;
+    margin-top: 1rem;
   }
 
   .footer-section {
