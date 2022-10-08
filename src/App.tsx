@@ -5,12 +5,14 @@ import Page from './Pages/Page'
 import Layout from './Layout/Layout'
 import LandingPageDk from './Pages/LandingPageDk'
 import Help from './Pages/Help'
+import AppTwo from './AppTwo'
 
 const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route index element={<LandingPageDk />} />
+        {/* <Route index element={<LandingPageDk />} /> */}
+        <Route index element={<AppTwo />} />
         <Route path='danish' element={<LandingPageDk />} />
         <Route path='english' element={<LandingPageEng />} />
         <Route path='help' element={<Help />} />
