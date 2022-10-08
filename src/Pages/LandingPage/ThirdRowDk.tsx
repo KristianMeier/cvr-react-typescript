@@ -1,13 +1,23 @@
-import React from 'react'
 import PlaceholderContainer from '../../Components/PlaceholderContainer'
+import styled from 'styled-components'
+import { CenterComponent } from '../../Components/CenterComponent'
+import { DanishTitleType, DataDk } from '../../Fixtures/DataDk'
 
-const ThirdRowDk = () => {
+export const ThirdRow = () => {
+  const { thirdRow } = DataDk
   return (
-    <>
-      <PlaceholderContainer title='Third Row' />
-      <PlaceholderContainer title='Third Row' />
-    </>
+    <Wrapper>
+      {thirdRow.map((item) => {
+        const { id, title }: DanishTitleType = item
+        return <PlaceholderContainer id={id} title={title} />
+      })}
+    </Wrapper>
   )
 }
 
-export default ThirdRowDk
+export default ThirdRow
+
+const Wrapper = styled(CenterComponent)`
+  display: flex;
+  gap: 1rem 2rem;
+`

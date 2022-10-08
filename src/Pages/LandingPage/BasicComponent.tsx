@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { CenterComponent } from '../../Components/CenterComponent'
 import { DanishTitleType, DataDk } from '../../Fixtures/DataDk'
 
-export const SecondRowDk = () => {
-  const { secondRow } = DataDk
+export const BasicComponent = ({ structuredata }) => {
+  const { structuredata } = DataDk
   return (
     <Wrapper>
       {secondRow.map((item) => {
@@ -15,7 +15,7 @@ export const SecondRowDk = () => {
   )
 }
 
-export default SecondRowDk
+export default BasicComponent
 
 const Wrapper = styled(CenterComponent)`
   display: flex;

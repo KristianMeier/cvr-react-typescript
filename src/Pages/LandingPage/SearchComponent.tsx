@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Data } from '../../Fixtures/DataEng'
+import { DataEng } from '../../Fixtures/DataEng'
 import { Icon } from '../../Components/Icon'
 import { PageComponenet } from '../../Components/PageComponent'
 import { SearchInput } from '../../Components/SearchInput'
@@ -7,7 +7,7 @@ import { SearchInput } from '../../Components/SearchInput'
 const SearchComponent = () => {
   const {
     search: { title, textIcons },
-  } = Data
+  } = DataEng
 
   return (
     <Wrapper>

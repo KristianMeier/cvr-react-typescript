@@ -39,7 +39,7 @@ type DataType = {
   }
 }
 
-export const Data: DataType = {
+export const DataEng: DataType = {
   navbar: {
     textIcons: [
       {

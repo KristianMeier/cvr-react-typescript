@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import { Icon } from '../Components/Icon'
 import Logo from '../Components/Logo'
 import { StyledLink } from '../Components/StyledLink'
-import { Data } from '../Fixtures/DataEng'
+import { DataEng } from '../Fixtures/DataEng'
 
 const Navigation = () => {
   const {
     navbar: { textIcons },
-  } = Data
+  } = DataEng
 
   return (
     <Wrapper>

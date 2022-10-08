@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { Data } from '../Fixtures/DataEng'
+import { DataEng } from '../Fixtures/DataEng'
 import { Icon } from './Icon'
 import { PageComponenet } from './PageComponent'
 
 const AboutCvr = () => {
   const {
     aboutcvr: { title, text, textIcons },
-  } = Data
+  } = DataEng
 
   return (
     <Wrapper>

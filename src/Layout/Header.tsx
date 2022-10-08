@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import { Icon } from '../Components/Icon'
 import { StyledLink } from '../Components/StyledLink'
-import { Data } from '../Fixtures/DataEng'
+import { DataEng } from '../Fixtures/DataEng'
 
 const Header = () => {
   const {
     title: { mainTitle, earthIcon, textIcons, titleLinks },
-  } = Data
+  } = DataEng
 
   return (
     <>

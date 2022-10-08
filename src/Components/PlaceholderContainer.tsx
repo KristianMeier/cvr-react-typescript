@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { PageComponenet } from './PageComponent'
 
-type PlaceholderContainerProps = { title: string }
+type PlaceholderContainerProps = { id: number; title: string }
 
-const PlaceholderContainer = ({ title }: PlaceholderContainerProps) => {
+const PlaceholderContainer = ({ id, title }: PlaceholderContainerProps) => {
   return (
     <Wrapper>
-      <div>
+      <div key={id}>
         <h1>{title}</h1>
       </div>
     </Wrapper>
