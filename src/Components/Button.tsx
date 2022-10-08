@@ -1,17 +1,19 @@
 import styled from 'styled-components'
 
 type ButtonProps = {
-  link: string;
-  title: string;
+  link: string
+  title: string
 }
 
-const Button = ({ link, title }: ButtonProps) => 
+const Button = ({ link, title }: ButtonProps) => (
   <Wrapper href={link}>{title}</Wrapper>
+)
 
 export default Button
 
 const Wrapper = styled.a`
   text-transform: uppercase;
+  text-decoration: none;
   background: white;
   color: black;
   padding: 0.375rem 0.75rem;

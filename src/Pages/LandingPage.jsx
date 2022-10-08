@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import Button from '../Components/Button'
 import Loading from '../Loading'
-import HelpComponent from './HelpComponent'
+import LandingPageComponent from './LandingPageComponent'
 
-//TODO6
-function Help() {
+//TODO5
+function LandingPage() {
   const url = 'Data.json'
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
@@ -39,7 +39,7 @@ function Help() {
     )
   if (loading) return <Loading />
   if (data.length === 0) return <h2> Can accecs source, but no data. </h2>
-  return <HelpComponent data={data} />
+  return <LandingPageComponent data={data} />
 }
 
-export default Help
+export default LandingPage

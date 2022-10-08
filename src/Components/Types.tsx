@@ -1,4 +1,4 @@
-export type DanishTitleType = {
+export type TitleType = {
   id: number
   title: string
 }
@@ -7,19 +7,19 @@ export type LoremType = {
   text: string
 }
 
-export type DanishType = {
+export type Type = {
   structureData: {
-    secondRow: DanishTitleType[]
-    thirdRow: DanishTitleType[]
-    fourthRow: DanishTitleType[]
+    secondRow: TitleType[]
+    thirdRow: TitleType[]
+    fourthRow: TitleType[]
   }
-  sidebarLinks: DanishTitleType[]
+  sidebarLinks: TitleType[]
   loremTen: LoremType
   loremTwentyFive: LoremType
   loremHundred: LoremType
 }
 
-export const DataDk: DanishType = {
+export const Data: Type = {
   structureData: {
     secondRow: [
       { id: 1, title: 'Få hjælp til Cvr' },

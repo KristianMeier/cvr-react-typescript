@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { PageComponenet } from './PageComponent'
 
-type PlaceholderContainerProps = { id: number; title: string }
+//TODO2
+type PlaceholderContainerProps = { id?: number; title: string }
 
 const PlaceholderContainer = ({ id, title }: PlaceholderContainerProps) => {
   return (

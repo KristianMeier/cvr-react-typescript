@@ -1,13 +1,11 @@
-import React from 'react'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
-import { Icon } from '../Components/Icon'
 import { StyledLink } from '../Components/StyledLink'
 import { DataEng } from '../Archive/DataEng'
 
 const Header = () => {
   const {
-    title: { mainTitle, earthIcon, textIcons, titleLinks },
+    title: { mainTitle, titleLinks },
   } = DataEng
 
   return (
@@ -35,22 +33,22 @@ const Header = () => {
   )
 }
 
-const SmallLinks = styled.div`
-  display: flex;
+// const SmallLinks = styled.div`
+//   display: flex;
 
-  @media (min-width: 768px) {
-    display: none;
-  }
-`
+//   @media (min-width: 768px) {
+//     display: none;
+//   }
+// `
 
-const LinkText = styled.div`
-  display: none;
+// const LinkText = styled.div`
+//   display: none;
 
-  @media (min-width: 768px) {
-    display: flex;
-    gap: 1rem;
-  }
-`
+//   @media (min-width: 768px) {
+//     display: flex;
+//     gap: 1rem;
+//   }
+// `
 
 const Wrapper = styled(CenterComponent)`
   display: flex;
