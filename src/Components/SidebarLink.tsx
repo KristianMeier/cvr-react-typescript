@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components'
 
 type SidebarLinkProps = {
@@ -5,11 +6,14 @@ type SidebarLinkProps = {
   title: string
 }
 
-const SidebarLink = ({ id, title }: SidebarLinkProps) => {
+const SidebarLink = ({ id, title, removeSidebarLink }: SidebarLinkProps) => {
   return (
     <Wrapper>
       <div className='container' key={id}>
-        <h4> {title} </h4>
+        <h4>
+          {title}
+          <button onClick={() => removeSidebarLink(id)}>(slet)</button>
+        </h4>
       </div>
       <hr />
     </Wrapper>

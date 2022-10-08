@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useState, useEffect } from 'react'
 import Button from '../Components/Button'
 import Loading from '../Loading'
@@ -5,10 +6,15 @@ import HelpComponent from './HelpComponent'
 
 //TODO6
 function Help() {
-  const url = 'Data.json'
+  const url = 'DataTwo.json'
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
   const [hasError, setError] = useState(false)
+
+  const removeSidebarLink = (id) => {
+    const filteredData = data.filter((item) => item.id !== id)
+    setData(filteredData)
+  }
 
   const fetchData = async () => {
     setLoading(true)
@@ -39,7 +45,7 @@ function Help() {
     )
   if (loading) return <Loading />
   if (data.length === 0) return <h2> Can accecs source, but no data. </h2>
-  return <HelpComponent data={data} />
+  return <HelpComponent data={data} removeSidebarLink={removeSidebarLink} />
 }
 
 export default Help
