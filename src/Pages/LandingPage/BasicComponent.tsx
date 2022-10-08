@@ -1,6 +1,4 @@
 import PlaceholderContainer from '../../Components/PlaceholderContainer'
-import styled from 'styled-components'
-import { CenterComponent } from '../../Components/CenterComponent'
 
 type BasicComponentProps = {
   id: number

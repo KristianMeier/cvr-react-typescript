@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import SidebarLink from '../Components/SidebarLink'

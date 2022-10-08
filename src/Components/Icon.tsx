@@ -1,8 +1,6 @@
-import React from 'react'
-
 type IconProps = {
-  faIcon: string;
-  id: number;
+  faIcon: string
+  id: number
 }
 
 export const Icon = ({ faIcon, id }: IconProps) => (
