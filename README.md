@@ -23,3 +23,7 @@
 - Udkommenteret CSS
 - Globalstyles component I styles
 -
+
+# Spørgsmål
+
+- Kig på alt type script typing. Hvorfor bruges der xyzProps og nogle gange zyxType some navngivning.

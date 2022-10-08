@@ -4,7 +4,9 @@ import { CenterComponent } from '../../Components/CenterComponent'
 import { DanishTitleType, DataDk } from '../../Fixtures/DataDk'
 
 export const SecondRowDk = () => {
-  const { secondRow } = DataDk
+  const {
+    structureData: { secondRow },
+  } = DataDk
   return (
     <Wrapper>
       {secondRow.map((item) => {
