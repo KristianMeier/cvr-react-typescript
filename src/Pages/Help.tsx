@@ -6,7 +6,7 @@ import HelpComponent from './HelpComponent'
 
 //TODO6
 function Help() {
-  const url = 'DataTwo.json'
+  const url = 'JsonData.json'
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
   const [hasError, setError] = useState(false)
@@ -44,7 +44,7 @@ function Help() {
       </div>
     )
   if (loading) return <Loading />
-  if (data.length === 0) return <h2> Can accecs source, but no data. </h2>
+  // if (data.length === 0) return <h2> Can accecs source, but no data. </h2>
   return <HelpComponent data={data} removeSidebarLink={removeSidebarLink} />
 }
 

@@ -3,20 +3,17 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import SidebarLink from '../Components/SidebarLink'
+import { JsData } from '../Fixtures/JsData'
 
 const HelpComponent = ({ data, removeSidebarLink }) => {
   const [readMore, setReadMore] = useState(true)
-
-  const loremTwentyFive =
-    'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, voluptatum tempora rem nobis velit nisi blanditiis quae sunt neque accusamus. Fugiat quo distinctio repellat ratione.'
-
-  const loremHundred =
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid ducimus consectetur fugit, asperiores adipisci nemo optio, soluta beatae sunt nisi esse iure blanditiis deserunt deleniti dolores possimus necessitatibus quas reprehenderit non sapiente distinctio mollitia? Tenetur fuga minus ipsa neque quos facere rem natus perspiciatis, laudantium repudiandae voluptatem quas dolorum deleniti accusantium iste laborum, enim culpa, inventore dolor autem maiores sunt. Provident recusandae qui ea nulla dolor facere quae, et quod voluptate in eaque pariatur nobis architecto quasi, eveniet officiis, at unde facilis soluta rerum itaque deserunt! Odio, doloremque unde ad numquam molestias iure dolores autem nihil eaque, sit facere.'
+  const { loremTwentyFive, loremHundred } = JsData
+  const [liveData, setLiveData] = useState(data)
 
   return (
     <Wrapper>
       <div className='sidebar'>
-        {data.map((item) => {
+        {liveData.map((item) => {
           const { id, title } = item
           return (
             <SidebarLink
@@ -27,12 +24,26 @@ const HelpComponent = ({ data, removeSidebarLink }) => {
             />
           )
         })}
+        {liveData.length == 0 ? (
+          <button
+            className='reload'
+            onClick={() => window.location.reload(false)}
+          >
+            Reload
+          </button>
+        ) : (
+          <button className='reload' onClick={() => setLiveData([])}>
+            Delete all
+          </button>
+        )}
       </div>
       <div className='content'>
-        <h3>{loremTwentyFive}</h3>
+        <h3>{loremTwentyFive.text}</h3>
         <h3>Hej Hej</h3>
         <h5>
-          {readMore ? loremHundred : `${loremHundred.substring(0, 200)}...  `}
+          {readMore
+            ? loremHundred.text
+            : `${loremHundred.text.substring(0, 200)}...  `}
           <button onClick={() => setReadMore(!readMore)}>
             {readMore ? 'Vis mindre' : 'Vis resten'}
           </button>
@@ -64,6 +75,9 @@ const Wrapper = styled(CenterComponent)`
 
   h1 {
     margin-bottom: 1.25rem;
+  }
+
+  .reload {
   }
 
   h3 {
