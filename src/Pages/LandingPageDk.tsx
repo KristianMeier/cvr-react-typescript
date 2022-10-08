@@ -1,4 +1,3 @@
-import Header from '../Layout/Header'
 import SearchComponent from './LandingPage/SearchComponent'
 import BasicComponent from './LandingPage/BasicComponent'
 import { DanishTitleType, DataDk } from '../Fixtures/DataDk'
@@ -11,7 +10,6 @@ const LandingPageDk = () => {
   } = DataDk
   return (
     <>
-      <Header />
       <SearchComponent />
       <Wrapper>
         {secondRow.map((item) => {

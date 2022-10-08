@@ -5,7 +5,6 @@ import AboutCvr from '../Components/AboutCvr'
 const LandingPageEng = () => {
   return (
     <>
-      <Header />
       <SearchComponent />
       <AboutCvr />
     </>

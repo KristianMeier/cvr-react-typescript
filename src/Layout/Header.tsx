@@ -14,16 +14,16 @@ const Header = () => {
     <>
       <Wrapper>
         <h1>{mainTitle} </h1>
-        <SmallLinks>
+        {/* <SmallLinks>
           {earthIcon.map((item) => (
             <Icon key={item.id} {...item} />
           ))}
-        </SmallLinks>
-        <LinkText>
+        </SmallLinks> */}
+        {/* <LinkText>
           {textIcons.map((item) => (
             <StyledLink key={item.id} {...item} />
           ))}
-        </LinkText>
+        </LinkText> */}
       </Wrapper>
       <Links>
         {titleLinks.map((item) => (

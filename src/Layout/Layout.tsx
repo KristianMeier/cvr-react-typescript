@@ -4,7 +4,8 @@ import { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../Components/GlobalStyles'
 import Footer from './Footer'
-import Navigation from './Navigation';
+import Navigation from './Navigation'
+import Header from './Header'
 
 const BaseTheme = {
   color: '#222',
@@ -29,6 +30,7 @@ const Layout = () => {
         <Container>
           <Navigation />
           <ContentWrapper>
+            <Header />
             <Button onClick={toggleTheme}>sdf</Button>
             <Outlet />
           </ContentWrapper>

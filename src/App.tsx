@@ -4,6 +4,7 @@ import LandingPageEng from './Pages/LandingPageEng'
 import Page from './Pages/Page'
 import Layout from './Layout/Layout'
 import LandingPageDk from './Pages/LandingPageDk'
+import Help from './Pages/Help'
 
 const App = () => (
   <BrowserRouter>
@@ -12,6 +13,7 @@ const App = () => (
         <Route index element={<LandingPageDk />} />
         <Route path='danish' element={<LandingPageDk />} />
         <Route path='english' element={<LandingPageEng />} />
+        <Route path='help' element={<Help />} />
         <Route path=':routeParams' element={<Page />} />
       </Route>
     </Routes>

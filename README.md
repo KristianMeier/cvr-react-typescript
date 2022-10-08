@@ -24,6 +24,7 @@
 - Globalstyles component I styles
 -
 
-# Spørgsmål
+# Spørgsmål/beslutninger
 
-- Kig på alt type script typing. Hvorfor bruges der xyzProps og nogle gange zyxType some navngivning.
+- Der fokuseres ikke længere på den danske og den engeksle side. Det er ikke bare en voersættelse. Der er også komplet forskelligt indhold.
+- Konceptet er cirka, at jeg lærer en ting i et tutorial afsnit (f.eks. Search) og så inplementere jeg det på siden.
