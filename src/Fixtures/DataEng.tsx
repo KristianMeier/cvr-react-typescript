@@ -4,7 +4,7 @@ type Icon = {
   faIcon: string
 }
 
-export type TextIcon = {
+type TextIcon = {
   id: number
   text: string
   faIcon: string

@@ -9,8 +9,9 @@ const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<Layout />}>
-        <Route index element={<LandingPageEng />} />
+        <Route index element={<LandingPageDk />} />
         <Route path='danish' element={<LandingPageDk />} />
+        <Route path='english' element={<LandingPageEng />} />
         <Route path=':routeParams' element={<Page />} />
       </Route>
     </Routes>
