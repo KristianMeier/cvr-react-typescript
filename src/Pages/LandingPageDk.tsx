@@ -36,6 +36,9 @@ const LandingPageDk = () => {
 export default LandingPageDk
 
 const Wrapper = styled(CenterComponent)`
-  display: flex;
-  gap: 1rem 2rem;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    gap: 0 3rem;
+  }
 `

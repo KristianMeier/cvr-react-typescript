@@ -27,4 +27,8 @@
 # Spørgsmål/beslutninger
 
 - Der fokuseres ikke længere på den danske og den engeksle side. Det er ikke bare en voersættelse. Der er også komplet forskelligt indhold.
+- Hvor dur kkm-cvr.com/Help ikke, når localhost:300/Help duer
+
+# Koncept/læring
+
 - Konceptet er cirka, at jeg lærer en ting i et tutorial afsnit (f.eks. Search) og så inplementere jeg det på siden.

@@ -26,6 +26,12 @@ const Navigation = () => {
 }
 
 const Wrapper = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
   height: 6rem;
   width: 100%;
   display: flex;

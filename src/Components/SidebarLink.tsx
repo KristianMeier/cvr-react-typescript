@@ -8,7 +8,7 @@ type SidebarLinkProps = {
 const SidebarLink = ({ id, title }: SidebarLinkProps) => {
   return (
     <Wrapper>
-      <div key={id}>
+      <div className='container' key={id}>
         <h4> {title} </h4>
       </div>
       <hr />

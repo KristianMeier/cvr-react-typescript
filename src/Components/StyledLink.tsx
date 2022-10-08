@@ -1,15 +1,14 @@
-
 import styled, { css } from 'styled-components'
 
 type LinkProps = {
-  odd?: boolean;
-  first?: boolean;
-  linktype?: string;
-  link: string;
-  text: string;
-  size?: string;
-  bold?: number;
-};
+  odd?: boolean
+  first?: boolean
+  linktype?: string
+  link: string
+  text: string
+  size?: string
+  bold?: number
+}
 
 export const StyledLink = ({
   odd,
@@ -39,6 +38,13 @@ export const StyledLink = ({
 const Link = styled.a<LinkProps>`
   text-decoration: none;
   color: black;
+  transition: var(--transition);
+
+  :hover {
+    transform: var(--transform);
+    color: darkblue;
+  }
+
   font-size: ${({ size }: LinkProps) => size};
   font-weight: ${({ bold }: LinkProps) => (bold ? 750 : 250)};
   ${({ linktype }: LinkProps) => {

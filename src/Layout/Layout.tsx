@@ -55,6 +55,7 @@ const Button = styled.button`
 `
 
 const ContentWrapper = styled.div`
+  margin-top: 6rem;
   display: flex;
   background-color: #f2f2f2;
   min-height: 75vh;
