@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import { Icon } from '../Components/Icon'
 import { StyledLink } from '../Components/StyledLink'
-import { DataEng } from '../Fixtures/DataEng'
+import { DataEng } from '../Archive/DataEng'
 
 const Header = () => {
   const {

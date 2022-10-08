@@ -1,6 +1,6 @@
 import SearchComponent from './LandingPage/SearchComponent'
 import BasicComponent from './LandingPage/BasicComponent'
-import { DanishTitleType, DataDk } from '../Fixtures/DataDk'
+import { DanishTitleType, DataDk } from '../Fixtures/Data'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 

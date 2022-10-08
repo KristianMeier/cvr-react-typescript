@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Logo from '../Components/Logo'
 import { StyledLink } from '../Components/StyledLink'
-import { DataEng } from '../Fixtures/DataEng'
+import { DataEng } from '../Archive/DataEng'
 
 const Footer = () => {
   const {

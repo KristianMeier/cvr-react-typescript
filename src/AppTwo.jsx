@@ -18,8 +18,11 @@ function AppTwo() {
       setLoading(false)
     }
   }
+
   useEffect(() => {
-    fetchTours()
+    setTimeout(() => {
+      fetchTours()
+    }, 750)
   }, [])
   if (loading) {
     return (
@@ -32,7 +35,7 @@ function AppTwo() {
     return (
       <main>
         <div>
-          <h2> Det er ikke noget data i json </h2>
+          <h2> Der er et problem med at tilgå dataen på siden.</h2>
         </div>
       </main>
     )

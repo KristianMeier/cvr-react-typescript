@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { DataEng } from '../../Fixtures/DataEng'
+import { DataEng } from '../../Archive/DataEng'
 import { Icon } from '../../Components/Icon'
 import { PageComponenet } from '../../Components/PageComponent'
 import { SearchInput } from '../../Components/SearchInput'

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Icon } from '../Components/Icon'
 import Logo from '../Components/Logo'
 import { StyledLink } from '../Components/StyledLink'
-import { DataEng } from '../Fixtures/DataEng'
+import { DataEng } from '../Archive/DataEng'
 
 const Navigation = () => {
   const {

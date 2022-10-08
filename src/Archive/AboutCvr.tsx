@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { DataEng } from '../Fixtures/DataEng'
-import { Icon } from './Icon'
-import { PageComponenet } from './PageComponent'
+import { DataEng } from './DataEng'
+import { Icon } from '../Components/Icon'
+import { PageComponenet } from '../Components/PageComponent'
 
 const AboutCvr = () => {
   const {

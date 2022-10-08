@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import SidebarLink from '../Components/SidebarLink'
-import { DataDk } from '../Fixtures/DataDk'
+import { DataDk } from '../Fixtures/Data'
 
 const Help = () => {
   const { sidebarLinks, loremTwentyFive, loremHundred } = DataDk

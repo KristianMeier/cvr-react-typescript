@@ -1,5 +1,5 @@
-import SearchComponent from './LandingPage/SearchComponent'
-import AboutCvr from '../Components/AboutCvr'
+import SearchComponent from '../Pages/LandingPage/SearchComponent'
+import AboutCvr from './AboutCvr'
 
 const LandingPageEng = () => {
   return (
