@@ -1,13 +1,19 @@
-import SearchComponent from '../Pages/LandingPage/SearchComponent'
-import AboutCvr from './AboutCvr'
+import React from 'react'
 
 const LandingPageEng = () => {
-  return (
-    <>
-      <SearchComponent />
-      <AboutCvr />
-    </>
-  )
+  return <div>LandingPageEng</div>
 }
 
-export default LandingPageEng
+// import SearchComponent from '../Pages/LandingPage/SearchComponent'
+// import AboutCvr from './AboutCvr'
+
+// const LandingPageEng = () => {
+//   return (
+//     <>
+//       <SearchComponent />
+//       <AboutCvr />
+//     </>
+//   )
+// }
+
+// export default LandingPageEng

@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { DataEng } from '../../Archive/DataEng'
-import { Icon } from '../../Components/Icon'
+import { Icon } from '../../Components/Styles/Icon'
 import { PageComponenet } from '../../Components/PageComponent'
-import { SearchInput } from '../../Components/SearchInput'
+import { SearchInput } from '../../Components/Styles/SearchInput'
+import { Data } from '../../Fixtures/Data'
 
 const SearchComponent = () => {
   const {
     search: { title, textIcons },
-  } = DataEng
+  } = Data
 
   return (
     <Wrapper>

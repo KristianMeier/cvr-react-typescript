@@ -1,27 +1,17 @@
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
-import { StyledLink } from '../Components/StyledLink'
-import { DataEng } from '../Archive/DataEng'
+import { StyledLink } from '../Components/Styles/StyledLink'
+import { Data } from '../Fixtures/Data'
 
 const Header = () => {
   const {
     title: { mainTitle, titleLinks },
-  } = DataEng
+  } = Data
 
   return (
     <>
       <Wrapper>
         <h1>{mainTitle} </h1>
-        {/* <SmallLinks>
-          {earthIcon.map((item) => (
-            <Icon key={item.id} {...item} />
-          ))}
-        </SmallLinks> */}
-        {/* <LinkText>
-          {textIcons.map((item) => (
-            <StyledLink key={item.id} {...item} />
-          ))}
-        </LinkText> */}
       </Wrapper>
       <Links>
         {titleLinks.map((item) => (
@@ -32,23 +22,6 @@ const Header = () => {
     </>
   )
 }
-
-// const SmallLinks = styled.div`
-//   display: flex;
-
-//   @media (min-width: 768px) {
-//     display: none;
-//   }
-// `
-
-// const LinkText = styled.div`
-//   display: none;
-
-//   @media (min-width: 768px) {
-//     display: flex;
-//     gap: 1rem;
-//   }
-// `
 
 const Wrapper = styled(CenterComponent)`
   display: flex;

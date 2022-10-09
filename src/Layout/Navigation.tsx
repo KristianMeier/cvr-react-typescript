@@ -1,13 +1,12 @@
 import styled from 'styled-components'
-import { Icon } from '../Components/Icon'
-import Logo from '../Components/Logo'
-import { StyledLink } from '../Components/StyledLink'
-import { DataEng } from '../Archive/DataEng'
-
+import { Icon } from '../Components/Styles/Icon'
+import Logo from '../Components/Utils/Logo'
+import { StyledLink } from '../Components/Styles/StyledLink'
+import { Data } from '../Fixtures/Data'
 const Navigation = () => {
   const {
     navbar: { textIcons },
-  } = DataEng
+  } = Data
 
   return (
     <Wrapper>

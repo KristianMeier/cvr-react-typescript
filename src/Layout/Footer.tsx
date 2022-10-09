@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import Logo from '../Components/Logo'
-import { StyledLink } from '../Components/StyledLink'
-import { DataEng } from '../Archive/DataEng'
+import Logo from '../Components/Utils/Logo'
+import { StyledLink } from '../Components/Styles/StyledLink'
+import { Data } from '../Fixtures/Data'
 
 const Footer = () => {
   const {
     footer: { firstColumn, secondColumn, thirdColumn },
-  } = DataEng
+  } = Data
 
   return (
     <Wrapper>

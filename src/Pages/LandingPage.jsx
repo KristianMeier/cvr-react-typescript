@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import Button from '../Components/Button'
-import ButtonNoLink from '../Components/ButtonNoLink'
+import Button from '../Components/Styles/Button'
+import ButtonNoLink from '../Components/Styles/ButtonNoLink'
 import { JsData } from '../Fixtures/JsData'
-import Loading from '../Loading'
+import Loading from '../Components/Utils/Loading'
 import LandingPageComponent from './LandingPageComponent'
 
 //TODO5

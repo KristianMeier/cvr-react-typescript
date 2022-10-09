@@ -1,9 +1,9 @@
 //@ts-nocheck
 import { useState, useEffect } from 'react'
-import Button from '../Components/Button'
-import Loading from '../Loading'
+import Button from '../Components/Styles/Button'
+import Loading from '../Components/Utils/Loading'
 import HelpComponent from './HelpComponent'
-import ButtonNoLink from '../Components/ButtonNoLink'
+import ButtonNoLink from '../Components/Styles/ButtonNoLink'
 
 //TODO6
 function Help() {
@@ -49,17 +49,16 @@ function Help() {
   if (data.length === 0)
     return (
       <>
-        <h2>No Data</h2>{' '}
-        <ButtonNoLink
-          text='Refresh Data'
-          onClick={() => fetchData()}
-        ></ButtonNoLink>
+        <h2>Access to date, but there is none. </h2>{' '}
+        <ButtonNoLink text='Refresh Data' onClick={() => fetchData()} />
       </>
     )
   return (
     <>
       <HelpComponent data={data} removeSidebarLink={removeSidebarLink} />
+      {/* TODO10 */}
       <ButtonNoLink text='Clear Data' onClick={() => setData([])} />
+      <ButtonNoLink text='Refresh Data' onClick={() => fetchData()} />
     </>
   )
 }

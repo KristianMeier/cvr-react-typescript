@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
-import SidebarLink from '../Components/SidebarLink'
+import SidebarLink from '../Components/Styles/SidebarLink'
 import { JsData } from '../Fixtures/JsData'
 
 const HelpComponent = ({ data, removeSidebarLink }) => {
@@ -23,13 +23,6 @@ const HelpComponent = ({ data, removeSidebarLink }) => {
             />
           )
         })}
-
-        {/* TODO8: Hvordan Reloader man ordenligt? */}
-        {data.length === 3 ? (
-          <button onClick={() => window.location.reload(true)}>Reload</button>
-        ) : (
-          ''
-        )}
       </div>
       <div className='content'>
         <h1>Dette er en titel</h1>

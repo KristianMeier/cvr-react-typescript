@@ -12,6 +12,8 @@
 
 # Test
 
+# Feedback 02-10-2022
+
 - Ikke TypeScript
 - Ikke ES6 syntax arrow functions
 - Nice med react router
@@ -22,7 +24,15 @@
 - Forstår ikke helt context/Data.js
 - Udkommenteret CSS
 - Globalstyles component I styles
--
+- TODO10. Hvordan styler jeg de 2 knapper.
+
+# Feedback 09-10-2022
+
+# Projekt-Struktur
+
+- Det forsøges at bruge styled component til components som Button, Inputfield, Image eller Link.
+- Det forsøges at bruge SCSS til Layout, som Billy. Dette kan være til Containers eller andre dele der kan bruges til det. Her bruges Minxin's istedet for const CenterComponent = styled(Pagecomponent)
+- Der laves kun localscope.
 
 # Spørgsmål/beslutninger
 
@@ -37,6 +47,7 @@
 - Kan man flytte min Clear data knap op et andet sted. Jeg kan kunde finde ud af at bruge useState i den samme fil hvor den er.
 - Hvad gør jeg galt med landing Page. hvorfor kan jeg ikke få dataen fra Json som Help Component.
 - Hvordan samler jeg JsonData.json og JsonDataTwo.json
+- Skal vi se på Billy-kodens struktur, og kopiere den
 
 # Koncept/læring
 

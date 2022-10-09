@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
-import Button from '../Components/Button'
+import Button from '../Components/Styles/Button'
 
 const Page = () => {
   const { routeParams } = useParams()
