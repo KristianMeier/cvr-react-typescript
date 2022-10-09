@@ -24,7 +24,6 @@
 - Forstår ikke helt context/Data.js
 - Udkommenteret CSS
 - Globalstyles component I styles
-- TODO10. Hvordan styler jeg de 2 knapper.
 
 # Feedback 09-10-2022
 
@@ -48,6 +47,7 @@
 - Hvad gør jeg galt med landing Page. hvorfor kan jeg ikke få dataen fra Json som Help Component.
 - Hvordan samler jeg JsonData.json og JsonDataTwo.json
 - Skal vi se på Billy-kodens struktur, og kopiere den
+- TODO10. Hvordan styler jeg de 2 knapper.
 
 # Koncept/læring
 

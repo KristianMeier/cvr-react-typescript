@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Logo from '../Components/Utils/Logo'
 import { StyledLink } from '../Components/Styles/StyledLink'
 import { Data } from '../Fixtures/Data'
+import BootstrapExample from './scss/Examples/BootstrapExample'
 
 const Footer = () => {
   const {
@@ -12,6 +13,7 @@ const Footer = () => {
     <Wrapper>
       <section className='footer-section'>
         <Logo />
+        <BootstrapExample />
       </section>
       <section className='footer-section'>
         {firstColumn.map((item, index) => {
