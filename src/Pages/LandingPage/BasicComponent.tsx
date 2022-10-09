@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import PlaceholderContainer from '../../Components/PlaceholderContainer'
 
 // TODO1:

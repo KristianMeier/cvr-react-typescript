@@ -1,0 +1,20 @@
+.blue-button {
+  width: 200px;
+  height: 40px;
+  background-color: #800080;
+  border: black solid 1px;
+  color: black;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  border-color: transparent;
+  background-color: #0d6efd;
+  color: white;
+  display: inline;
+}
+.blue-button:hover {
+  background-color: rgba(0, 0, 255, 0.534);
+}/*# sourceMappingURL=Extra.css.map */

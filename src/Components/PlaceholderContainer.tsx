@@ -7,7 +7,7 @@ type PlaceholderContainerProps = { id?: number; title: string }
 const PlaceholderContainer = ({ id, title }: PlaceholderContainerProps) => {
   return (
     <Wrapper>
-      <div className='container' key={id}>
+      <div className='container-place' key={id}>
         <h3>{title}</h3>
       </div>
     </Wrapper>
@@ -18,6 +18,7 @@ const Wrapper = styled(PageComponenet)`
   justify-content: right;
   align-items: center;
   height: 220px;
+  padding: 1rem;
 
   h3 {
     text-align: center;
@@ -34,7 +35,7 @@ const Wrapper = styled(PageComponenet)`
     text-align: right;
   }
 
-  .container {
+  .container-place {
     padding: 1rem;
   }
 `

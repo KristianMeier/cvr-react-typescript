@@ -48,6 +48,9 @@
 - Hvordan samler jeg JsonData.json og JsonDataTwo.json
 - Skal vi se på Billy-kodens struktur, og kopiere den
 - TODO10. Hvordan styler jeg de 2 knapper.
+- Hvordan lægger jeg kontent ind i BasicComponent. Noget med {children} ik?
+- Hvad er der galt medmin Scss cmopiler. Jeg skal klikke Watching i bunder for at den opdatere.
+- hvordan styler men en Bootstrap Component som <AllCollapseExample /> eller {Link} fra React-router fx.
 
 # Koncept/læring
 

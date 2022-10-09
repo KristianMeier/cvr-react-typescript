@@ -2,6 +2,7 @@
 $mainColorLight: rgb(8, 70, 255);
 $mainColor: rgba(87, 101, 255, 0.591);
 $mainColorDark: rgba(128, 147, 255, 0.525);
+$bootstrapBlue: #0d6efd;
 
 // Greycolrs
 $darkGrey: rgb(83, 83, 83);
@@ -27,26 +28,13 @@ $buttonHeight: 40px;
   border: $buttonBorder;
   color: $buttonTextColor;
   font-size: $buttonFontSize;
+  border-radius: 8px;
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  border-color: transparent;
 }
-
-.green-button {
-  @include button;
-  background-color: green;
-  color: white;
-
-  :hover {
-    background-color: purple;
-    color: blue;
-  }
-}
-
-.red-button {
-  @include button;
-  background-color: red;
-  color: grey;
-}
-
-// Mixins arguments
 
 @mixin buttonWithArguments($backgroundColorArgument, $colorArgument) {
   width: 200px;
@@ -55,16 +43,4 @@ $buttonHeight: 40px;
   border: $buttonBorder;
   color: $colorArgument;
   font-size: $buttonFontSize;
-}
-
-.green-button-arguments {
-  @include buttonWithArguments(green, white);
-  :hover {
-    background-color: purple;
-    color: blue;
-  }
-}
-
-.red-button-arguments {
-  @include buttonWithArguments(red, grey);
 }
