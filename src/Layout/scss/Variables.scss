@@ -44,3 +44,15 @@ $buttonHeight: 40px;
   color: $colorArgument;
   font-size: $buttonFontSize;
 }
+
+@mixin readMoreButton {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  transition: var(--transition);
+  color: darkblue;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

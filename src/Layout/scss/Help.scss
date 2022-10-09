@@ -1,4 +1,5 @@
 @import './CenterComponent';
+@import './Variables';
 
 .help-wrapper {
   @include centercomponent;
@@ -8,15 +9,7 @@
   display: block;
 
   button {
-    background-color: transparent;
-    border: none;
-    font-weight: 900;
-    transition: var(--transition);
-    color: darkblue;
-  }
-
-  button:hover {
-    transform: scale(1.05);
+    @include readMoreButton;
   }
 
   h1 {

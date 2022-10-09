@@ -4,6 +4,8 @@ import SearchComponent from './SearchComponent'
 import BasicComponent from './BasicComponent'
 import { TitleType } from '../Components/Types'
 import '../Layout/scss/LandingPage.css'
+import '../Layout/scss/Review.css'
+import Review from './Review'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -12,6 +14,9 @@ const LandingPageComponent = ({ data }) => {
   return (
     <>
       <SearchComponent />
+      <div className='landingpage-wrapper'>
+        <Review />
+      </div>
       <div className='landingpage-wrapper'>
         {secondRow.map((item) => {
           const { id, title }: TitleType = item

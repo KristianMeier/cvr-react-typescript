@@ -1,0 +1,47 @@
+p {
+  color: hsl(210deg, 22%, 49%);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  transition: var(--transition);
+  color: darkblue;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+.author {
+  margin-bottom: 0.25rem;
+}
+
+.info {
+  margin-bottom: 0;
+}
+
+.previous-btn,
+.next-btn {
+  color: hsl(205deg, 90%, 76%);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  justify-content: end;
+}
+
+.previous-btn:hover,
+.next-btn:hover {
+  color: hsl(205deg, 78%, 60%);
+}
+
+h4 {
+  letter-spacing: 0.1rem;
+  line-height: 1.25;
+  align-self: flex-start;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=Review.css.map */
