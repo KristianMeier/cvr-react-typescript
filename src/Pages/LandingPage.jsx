@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import Button from '../Components/Button'
+import ButtonNoLink from '../Components/ButtonNoLink'
+import { JsData } from '../Fixtures/JsData'
 import Loading from '../Loading'
 import LandingPageComponent from './LandingPageComponent'
 
 //TODO5
 function LandingPage() {
-  const url = 'Data.json'
+  const url = 'JsonDataTwo.json'
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
   const [hasError, setError] = useState(false)
@@ -30,6 +32,7 @@ function LandingPage() {
       fetchData()
     }, 750)
   }, [])
+
   if (hasError)
     return (
       <div>
@@ -37,9 +40,20 @@ function LandingPage() {
         <Button link='/' title='Landing Page' />
       </div>
     )
+
   if (loading) return <Loading />
-  if (data.length === 0) return <h2> Can accecs source, but no data. </h2>
-  return <LandingPageComponent data={data} />
+
+  if (data.length === 0)
+    return (
+      <>
+        <h2>No Data</h2>{' '}
+        <ButtonNoLink
+          text='Refresh Data'
+          onClick={() => fetchData()}
+        ></ButtonNoLink>
+      </>
+    )
+  return <LandingPageComponent data={JsData} />
 }
 
 export default LandingPage

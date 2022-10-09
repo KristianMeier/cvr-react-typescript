@@ -8,12 +8,11 @@ import { JsData } from '../Fixtures/JsData'
 const HelpComponent = ({ data, removeSidebarLink }) => {
   const [readMore, setReadMore] = useState(true)
   const { loremTwentyFive, loremHundred } = JsData
-  const [liveData, setLiveData] = useState(data)
 
   return (
     <Wrapper>
       <div className='sidebar'>
-        {liveData.map((item) => {
+        {data.map((item) => {
           const { id, title } = item
           return (
             <SidebarLink
@@ -24,22 +23,18 @@ const HelpComponent = ({ data, removeSidebarLink }) => {
             />
           )
         })}
-        {liveData.length == 0 ? (
-          <button
-            className='reload'
-            onClick={() => window.location.reload(false)}
-          >
-            Reload
-          </button>
+
+        {/* TODO8: Hvordan Reloader man ordenligt? */}
+        {data.length === 3 ? (
+          <button onClick={() => window.location.reload(true)}>Reload</button>
         ) : (
-          <button className='reload' onClick={() => setLiveData([])}>
-            Delete all
-          </button>
+          ''
         )}
       </div>
       <div className='content'>
+        <h1>Dette er en titel</h1>
         <h3>{loremTwentyFive.text}</h3>
-        <h3>Hej Hej</h3>
+
         <h5>
           {readMore
             ? loremHundred.text
@@ -75,9 +70,6 @@ const Wrapper = styled(CenterComponent)`
 
   h1 {
     margin-bottom: 1.25rem;
-  }
-
-  .reload {
   }
 
   h3 {

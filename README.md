@@ -32,6 +32,11 @@
 - TODO5+6, hvordan laver man det med noget {children} så jeg ikke skal lave denne super super skod gentagelse for hver Page. Jeg lærer det nok senere i Tutorial, men spørg RD alligevel.
 - Bare søg @ts-nocheck
 - I jasondata, bliver jeg nød til at lave et mellemrum til sdist, for at der med mellemrum til (slet). Kan man gøre det mere elegant?
+- TODO8: Hvordan reloader man ordenligt?
+- Hvordan kommer jeg af med JsData og kører det hede fra 1 endpoint (min Json fil). Kan kune finde ud af det, når det er et simpelt array.
+- Kan man flytte min Clear data knap op et andet sted. Jeg kan kunde finde ud af at bruge useState i den samme fil hvor den er.
+- Hvad gør jeg galt med landing Page. hvorfor kan jeg ikke få dataen fra Json som Help Component.
+- Hvordan samler jeg JsonData.json og JsonDataTwo.json
 
 # Koncept/læring
 

@@ -10,7 +10,6 @@ const App = () => (
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<LandingPage />} />
-
         <Route path='help' element={<Help />} />
         <Route path=':routeParams' element={<Page />} />
       </Route>

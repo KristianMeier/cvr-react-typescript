@@ -10,13 +10,13 @@ const LandingPageComponent = ({ data }) => {
   const {
     structureData: { secondRow, thirdRow, fourthRow },
   } = data
-
   return (
     <>
       <SearchComponent />
       <Wrapper>
         {secondRow.map((item) => {
           const { id, title }: TitleType = item
+
           return <BasicComponent key={id} title={title} />
         })}
       </Wrapper>

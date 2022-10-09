@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Button from '../Components/Button'
 import Loading from '../Loading'
 import HelpComponent from './HelpComponent'
+import ButtonNoLink from '../Components/ButtonNoLink'
 
 //TODO6
 function Help() {
@@ -36,6 +37,7 @@ function Help() {
       fetchData()
     }, 750)
   }, [])
+
   if (hasError)
     return (
       <div>
@@ -44,8 +46,22 @@ function Help() {
       </div>
     )
   if (loading) return <Loading />
-  // if (data.length === 0) return <h2> Can accecs source, but no data. </h2>
-  return <HelpComponent data={data} removeSidebarLink={removeSidebarLink} />
+  if (data.length === 0)
+    return (
+      <>
+        <h2>No Data</h2>{' '}
+        <ButtonNoLink
+          text='Refresh Data'
+          onClick={() => fetchData()}
+        ></ButtonNoLink>
+      </>
+    )
+  return (
+    <>
+      <HelpComponent data={data} removeSidebarLink={removeSidebarLink} />
+      <ButtonNoLink text='Clear Data' onClick={() => setData([])} />
+    </>
+  )
 }
 
 export default Help
