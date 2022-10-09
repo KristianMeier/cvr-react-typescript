@@ -1,7 +1,5 @@
 // @ts-nocheck
 import { Button } from 'react-bootstrap'
-import styled from 'styled-components'
-import { CenterComponent } from '../Components/CenterComponent'
 import '../Layout/scss/Extra.css'
 import AllCollapseExample from '../Components/Styles/Bootstrap/Accorditions'
 import BootstrapForm from '../Components/Styles/Bootstrap/BootstrapForm'
@@ -67,19 +65,3 @@ const Extra = () => {
 }
 
 export default Extra
-
-const Wrapper = styled(CenterComponent)`
-  min-height: 100vh;
-  margin-bottom: 3rem;
-  gap: 0 3rem;
-  display: block;
-
-  .container {
-    background-color: white;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    border: 0.5px solid lightgray;
-    border-radius: 5px;
-    padding: 2rem;
-  }
-`

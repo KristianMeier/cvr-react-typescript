@@ -1,19 +1,17 @@
 import styled from 'styled-components'
 import { PageComponenet } from './PageComponent'
-// import '../Layout/scss/PlaceHolderContainer.css'
+import '../Layout/scss/PlaceHolderContainer.css'
 
 //TODO2
 type PlaceholderContainerProps = { id?: number; title: string }
 
 const PlaceholderContainer = ({ id, title }: PlaceholderContainerProps) => {
   return (
-    <Wrapper>
+    <div className='placeholdercontainer-wrapper'>
       <div className='container-place' key={id}>
         <h3>{title}</h3>
       </div>
-    </Wrapper>
-
-    // </div>
+    </div>
   )
 }
 

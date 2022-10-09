@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import { StyledLink } from '../Components/Styles/StyledLink'
 import { Data } from '../Fixtures/Data'
+import './scss/Header.css'
 
 const Header = () => {
   const {
@@ -10,15 +11,15 @@ const Header = () => {
 
   return (
     <>
-      <Wrapper>
+      <div className='header-wrapper'>
         <h1>{mainTitle} </h1>
-      </Wrapper>
-      <Links>
+      </div>
+      <div className='link-wrapper'>
         {titleLinks.map((item) => (
           <StyledLink linktype='top' size='1.2rem' key={item.id} {...item} />
         ))}
         <hr />
-      </Links>
+      </div>
     </>
   )
 }

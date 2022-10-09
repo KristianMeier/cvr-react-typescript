@@ -1,4 +1,4 @@
-.placeholder-wrapper {
+.placeholdercontainer-wrapper {
   width: 90vw;
   margin: 0 auto;
   max-width: 1000px;
@@ -13,18 +13,18 @@
   height: 220px;
   padding: 1rem;
 }
-.placeholder-wrapper h3 {
+.placeholdercontainer-wrapper h3 {
   text-align: center;
   margin-top: 2.5rem;
   font-weight: 300;
 }
-.placeholder-wrapper p {
+.placeholdercontainer-wrapper p {
   display: inline;
 }
-.placeholder-wrapper .filter {
+.placeholdercontainer-wrapper .filter {
   margin-top: 1rem;
   text-align: right;
 }
-.placeholder-wrapper .container-place {
+.placeholdercontainer-wrapper .container-place {
   padding: 1rem;
 }/*# sourceMappingURL=PlaceHolderContainer.css.map */
