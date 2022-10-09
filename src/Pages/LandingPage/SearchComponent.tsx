@@ -3,6 +3,7 @@ import { Icon } from '../../Components/Styles/Icon'
 import { PageComponenet } from '../../Components/PageComponent'
 import { SearchInput } from '../../Components/Styles/SearchInput'
 import { Data } from '../../Fixtures/Data'
+import '../../Layout/scss/Search.css'
 
 const SearchComponent = () => {
   const {
@@ -10,7 +11,7 @@ const SearchComponent = () => {
   } = Data
 
   return (
-    <Wrapper>
+    <div className='search-wrapper'>
       <div>
         <h1>{title}</h1>
         <SearchInput />
@@ -18,7 +19,7 @@ const SearchComponent = () => {
           <Icon {...item} key={item.id} />
         ))}
       </div>
-    </Wrapper>
+    </div>
   )
 }
 

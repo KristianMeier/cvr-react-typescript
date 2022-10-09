@@ -5,6 +5,7 @@ import BasicComponent from './LandingPage/BasicComponent'
 import { TitleType } from '../Components/Types'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
+import '../Layout/scss/LandingPage.css'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -13,25 +14,24 @@ const LandingPageComponent = ({ data }) => {
   return (
     <>
       <SearchComponent />
-      <Wrapper>
+      <div className='landingpage-wrapper'>
         {secondRow.map((item) => {
           const { id, title }: TitleType = item
-
           return <BasicComponent key={id} title={title} />
         })}
-      </Wrapper>
-      <Wrapper>
+      </div>
+      <div className='landingpage-wrapper'>
         {thirdRow.map((item) => {
           const { id, title }: TitleType = item
           return <BasicComponent key={id} title={title} />
         })}
-      </Wrapper>
-      <Wrapper>
+      </div>
+      <div className='landingpage-wrapper'>
         {fourthRow.map((item) => {
           const { id, title }: TitleType = item
           return <BasicComponent key={id} title={title} />
         })}
-      </Wrapper>
+      </div>
     </>
   )
 }

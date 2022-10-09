@@ -1,0 +1,30 @@
+.placeholder-wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: var(--border-shadow);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  justify-content: right;
+  align-items: center;
+  height: 220px;
+  padding: 1rem;
+}
+.placeholder-wrapper h3 {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-weight: 300;
+}
+.placeholder-wrapper p {
+  display: inline;
+}
+.placeholder-wrapper .filter {
+  margin-top: 1rem;
+  text-align: right;
+}
+.placeholder-wrapper .container-place {
+  padding: 1rem;
+}/*# sourceMappingURL=PlaceHolderContainer.css.map */

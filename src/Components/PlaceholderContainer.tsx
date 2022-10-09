@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { PageComponenet } from './PageComponent'
+// import '../Layout/scss/PlaceHolderContainer.css'
 
 //TODO2
 type PlaceholderContainerProps = { id?: number; title: string }
@@ -11,8 +12,12 @@ const PlaceholderContainer = ({ id, title }: PlaceholderContainerProps) => {
         <h3>{title}</h3>
       </div>
     </Wrapper>
+
+    // </div>
   )
 }
+
+export default PlaceholderContainer
 
 const Wrapper = styled(PageComponenet)`
   justify-content: right;
@@ -39,5 +44,3 @@ const Wrapper = styled(PageComponenet)`
     padding: 1rem;
   }
 `
-
-export default PlaceholderContainer

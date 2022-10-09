@@ -4,13 +4,14 @@ import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
 import SidebarLink from '../Components/Styles/SidebarLink'
 import { JsData } from '../Fixtures/JsData'
+import '../Layout/scss/Help.css'
 
 const HelpComponent = ({ data, removeSidebarLink }) => {
   const [readMore, setReadMore] = useState(true)
   const { loremTwentyFive, loremHundred } = JsData
 
   return (
-    <Wrapper>
+    <div className='help-wrapper'>
       <div className='sidebar'>
         {data.map((item) => {
           const { id, title } = item
@@ -37,7 +38,7 @@ const HelpComponent = ({ data, removeSidebarLink }) => {
           </button>
         </h5>
       </div>
-    </Wrapper>
+    </div>
   )
 }
 

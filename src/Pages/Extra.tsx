@@ -2,7 +2,7 @@
 import { Button } from 'react-bootstrap'
 import styled from 'styled-components'
 import { CenterComponent } from '../Components/CenterComponent'
-import '../Layout/scss/Examples/Extra.css'
+import '../Layout/scss/Extra.css'
 import AllCollapseExample from '../Components/Styles/Bootstrap/Accorditions'
 import BootstrapForm from '../Components/Styles/Bootstrap/BootstrapForm'
 import BootStrapButtonGroup from '../Components/Styles/Bootstrap/ButtonGroup'
@@ -18,7 +18,7 @@ import BootstrapTooltip from '../Components/Styles/Bootstrap/BootstrapTooltip'
 
 const Extra = () => {
   return (
-    <Wrapper>
+    <div className='extra-wrapper'>
       <div className='container'>
         <Button>React Bootstrap</Button>
         <button className='blue-button'>Customer SCSS</button>
@@ -47,27 +47,22 @@ const Extra = () => {
       <div className='container'>
         <BootstrapDropdown />
       </div>
-
       <div className='container'>
         <BootstrapProgressBar />
       </div>
-
       <div className='container'>
         <BootstrapSpinner />
       </div>
-
       <div className='container'>
         <BootstrapTable />
       </div>
-
       <div className='container'>
         <BootstrapTabs />
       </div>
-
       <div className='container'>
         <BootstrapTooltip />
       </div>
-    </Wrapper>
+    </div>
   )
 }
 

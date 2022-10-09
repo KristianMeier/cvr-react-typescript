@@ -1,4 +1,21 @@
-.blue-button {
+.extra-wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  gap: 0 3rem;
+  display: block;
+}
+.extra-wrapper .container {
+  background-color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+  padding: 2rem;
+}
+.extra-wrapper .blue-button {
   width: 200px;
   height: 40px;
   background-color: #800080;
@@ -15,6 +32,6 @@
   color: white;
   display: inline;
 }
-.blue-button:hover {
+.extra-wrapper .blue-button:hover {
   background-color: rgba(0, 0, 255, 0.534);
 }/*# sourceMappingURL=Extra.css.map */
