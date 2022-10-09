@@ -1,3 +1,4 @@
+// @ts-nocheck
 const DataEng = () => {
   return <div>DataEng</div>
 }

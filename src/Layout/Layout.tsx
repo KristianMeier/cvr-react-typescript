@@ -30,7 +30,6 @@ const Layout = () => {
           <Navigation />
           <ContentWrapper>
             <Header />
-            <Button onClick={toggleTheme}>sdf</Button>
             <Outlet />
           </ContentWrapper>
           <Footer />
@@ -43,15 +42,6 @@ const Layout = () => {
 const Container = styled.div`
   color: ${(props) => props.theme.color};
   background: ${(props) => props.theme.background};
-`
-
-const Button = styled.button`
-  margin-left: auto;
-  margin-right: 0;
-  width: 1rem;
-  height: 0.5rem;
-  border: none;
-  color: ${BaseTheme.background};
 `
 
 const ContentWrapper = styled.div`

@@ -3,8 +3,6 @@
 import SearchComponent from './LandingPage/SearchComponent'
 import BasicComponent from './LandingPage/BasicComponent'
 import { TitleType } from '../Components/Types'
-import styled from 'styled-components'
-import { CenterComponent } from '../Components/CenterComponent'
 import '../Layout/scss/LandingPage.css'
 
 const LandingPageComponent = ({ data }) => {
@@ -37,11 +35,3 @@ const LandingPageComponent = ({ data }) => {
 }
 
 export default LandingPageComponent
-
-const Wrapper = styled(CenterComponent)`
-  @media screen and (min-width: 1024px) {
-    display: flex;
-    flex-direction: row;
-    gap: 0 3rem;
-  }
-`

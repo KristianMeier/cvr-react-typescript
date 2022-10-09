@@ -1,3 +1,4 @@
+// @ts-nocheck
 const AboutCvr = () => {
   return <div>AboutCvr</div>
 }
