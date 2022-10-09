@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import PlaceholderContainer from '../PlaceholderContainer'
+import PlaceholderContainer from './PlaceholderContainer'
 
 // TODO1:
 type BasicComponentProps = {

@@ -1,7 +1,7 @@
-import { Icon } from '../../Components/Styles/Icon'
-import { SearchInput } from '../../Components/Styles/SearchInput'
-import { Data } from '../../Fixtures/Data'
-import '../../Layout/scss/Search.css'
+import { Icon } from '../Components/Styles/Icon'
+import { SearchInput } from '../Components/Styles/SearchInput'
+import { Data } from '../Fixtures/Data'
+import '../Layout/scss/Search.css'
 
 const SearchComponent = () => {
   const {

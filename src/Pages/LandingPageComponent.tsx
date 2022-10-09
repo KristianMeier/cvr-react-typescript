@@ -1,7 +1,7 @@
 //TODO3
 //@ts-nocheck
-import SearchComponent from './LandingPage/SearchComponent'
-import BasicComponent from './LandingPage/BasicComponent'
+import SearchComponent from './SearchComponent'
+import BasicComponent from './BasicComponent'
 import { TitleType } from '../Components/Types'
 import '../Layout/scss/LandingPage.css'
 

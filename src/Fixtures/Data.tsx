@@ -106,12 +106,6 @@ export const Data: DataType = {
         faIcon: '',
         link: '/Kurv',
       },
-      {
-        id: 28,
-        text: 'Extra',
-        faIcon: '',
-        link: '/Extra',
-      },
     ],
   },
   search: {

@@ -16,5 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "public/Archive", "Archive/PageComponent.tsx"]
+  "include": [
+    "src",
+    "public/Archive",
+    "Archive/PageComponent.tsx",
+    "Archive/Bootstrap",
+    "Archive/Extra.tsx"
+  ]
 }

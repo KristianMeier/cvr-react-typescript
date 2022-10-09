@@ -4,7 +4,6 @@ import Page from './Pages/Page'
 import Layout from './Layout/Layout'
 import LandingPage from './Pages/LandingPage'
 import Help from './Pages/Help'
-import Extra from './Pages/Extra'
 
 const App = () => (
   <BrowserRouter>
@@ -12,7 +11,6 @@ const App = () => (
       <Route path='/' element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path='help' element={<Help />} />
-        <Route path='extra' element={<Extra />} />
         <Route path=':routeParams' element={<Page />} />
       </Route>
     </Routes>
