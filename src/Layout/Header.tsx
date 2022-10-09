@@ -56,7 +56,7 @@ const Links = styled(CenterComponent)`
   hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    max-width: 20rem;
+    max-width: 24rem;
   }
 `
 

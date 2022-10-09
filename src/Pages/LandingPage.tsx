@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useEffect } from 'react'
 import Button from '../Components/Styles/Button'
 import ButtonNoLink from '../Components/Styles/ButtonNoLink'
