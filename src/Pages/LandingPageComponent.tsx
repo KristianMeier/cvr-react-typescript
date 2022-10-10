@@ -1,12 +1,12 @@
 //TODO3
 //@ts-nocheck
 import SearchComponent from './SearchComponent'
-import BasicComponent from './BasicComponent'
-import { TitleType } from '../Components/Types'
 import Review from './Review'
 import Accordition from './Accordition'
 import { CenterComponent } from '../Design/CenterComponent'
 import styled from 'styled-components'
+import { ComponentContainer } from '../Design/ComponentContainer'
+import PlaceholderContainer from '../Design/PlaceholderContainer'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -23,20 +23,17 @@ const LandingPageComponent = ({ data }) => {
       </Wrapper>
       <Wrapper>
         {secondRow.map((item) => {
-          const { id, title }: TitleType = item
-          return <BasicComponent key={id} title={title} />
+          return <ComponentContainer />
         })}
       </Wrapper>
       <Wrapper>
         {thirdRow.map((item) => {
-          const { id, title }: TitleType = item
-          return <BasicComponent key={id} title={title} />
+          return <ComponentContainer />
         })}
       </Wrapper>
       <Wrapper>
         {fourthRow.map((item) => {
-          const { id, title }: TitleType = item
-          return <BasicComponent key={id} title={title} />
+          return <ComponentContainer />
         })}
       </Wrapper>
     </>

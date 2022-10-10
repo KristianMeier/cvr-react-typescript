@@ -24,13 +24,13 @@ const Topic = ({ title, info }: TopicType) => {
   )
 }
 
-const TopicContainer = styled.article`
+const TopicContainer = styled.div`
   padding: 1rem 1.5rem;
   border: 2px solid #eae6eb;
   margin-bottom: 1rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
-  align-self: stretch;
+  align-self: center;
 
   h4 {
     text-transform: none;
@@ -74,13 +74,11 @@ const TopicContainer = styled.article`
 function Accordition() {
   return (
     <AccorditionWrapper>
-      <div className='container-place'>
-        <section className='info'>
-          {accorditionData.map((topic) => {
-            return <Topic key={topic.id} {...topic}></Topic>
-          })}
-        </section>
-      </div>
+      <section className='info'>
+        {accorditionData.map((topic) => {
+          return <Topic key={topic.id} {...topic}></Topic>
+        })}
+      </section>
     </AccorditionWrapper>
   )
 }

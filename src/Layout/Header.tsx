@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       <Wrapper>
-        …<h1>{mainTitle} </h1>
+        <h1>{mainTitle} </h1>
       </Wrapper>
       <Links>
         {titleLinks.map((item) => (

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { annualReportFacts } from '../Fixtures/JsData'
 import styled from 'styled-components'
+import { ComponentContainer } from '../Design/ComponentContainer'
 
 const Review = () => {
   const [readMore, setReadMore] = useState(false)
@@ -36,22 +37,20 @@ const Review = () => {
 
   return (
     <Wrapper>
-      <div className='container-place'>
-        <h4 className='author'>{title}</h4>
-        <p className='info'>
-          {readMore ? text : `${text.substring(0, 350)}...  `}
-          <button onClick={() => setReadMore(!readMore)}>
-            {readMore ? 'Vis mindre' : 'Vis resten'}
-          </button>
-        </p>
-        <div className='button-container'>
-          <button className='previous-btn' onClick={previousFact}>
-            <FaChevronLeft />
-          </button>
-          <button className='next-btn' onClick={nextFact}>
-            <FaChevronRight />
-          </button>
-        </div>
+      <h4 className='author'>{title}</h4>
+      <p className='info'>
+        {readMore ? text : `${text.substring(0, 350)}...  `}
+        <button onClick={() => setReadMore(!readMore)}>
+          {readMore ? 'Vis mindre' : 'Vis resten'}
+        </button>
+      </p>
+      <div className='button-container'>
+        <button className='previous-btn' onClick={previousFact}>
+          <FaChevronLeft />
+        </button>
+        <button className='next-btn' onClick={nextFact}>
+          <FaChevronRight />
+        </button>
       </div>
     </Wrapper>
   )
@@ -59,7 +58,7 @@ const Review = () => {
 
 export default Review
 
-const Wrapper = styled.div`
+const Wrapper = styled(ComponentContainer)`
   button {
     background-color: transparent;
     border: none;
