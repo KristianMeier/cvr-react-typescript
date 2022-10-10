@@ -2,8 +2,8 @@
 import { useState } from 'react'
 import SidebarLink from '../Components/Styles/SidebarLink'
 import { JsData } from '../Fixtures/JsData'
-import '../Layout/scss/Help.css'
-import ButtonNoLink from '../Components/Styles/ButtonNoLink'
+import styled from 'styled-components'
+import { CenterComponent } from '../Design/CenterComponent'
 
 const HelpComponent = ({ data, removeSidebarLink, clearData }) => {
   const [readMore, setReadMore] = useState(true)
@@ -44,3 +44,62 @@ const HelpComponent = ({ data, removeSidebarLink, clearData }) => {
 }
 
 export default HelpComponent
+
+const Wrapper = styled(CenterComponent)`
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  gap: 0 3rem;
+  display: block;
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    transition: var(--transition);
+    color: black;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  h5 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .sidebar {
+      display: block;
+      flex-basis: 30%;
+      padding: 1rem;
+      border: 2px solid black;
+    }
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .content {
+    flex-basis: 70%;
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+`

@@ -21,6 +21,7 @@
     "public/Archive",
     "Archive/PageComponent.tsx",
     "Archive/Bootstrap",
-    "Archive/Extra.tsx"
+    "Archive/Extra.tsx",
+    "Archive/PlaceholderContainer.tsx"
   ]
 }

@@ -3,10 +3,10 @@
 import SearchComponent from './SearchComponent'
 import BasicComponent from './BasicComponent'
 import { TitleType } from '../Components/Types'
-import '../Layout/scss/LandingPage.css'
-import '../Layout/scss/Review.css'
 import Review from './Review'
 import Accordition from './Accordition'
+import { CenterComponent } from '../Design/CenterComponent'
+import styled from 'styled-components'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -44,3 +44,11 @@ const LandingPageComponent = ({ data }) => {
 }
 
 export default LandingPageComponent
+
+const Wrapper = styled(CenterComponent)`
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    gap: 0 3rem;
+  }
+`

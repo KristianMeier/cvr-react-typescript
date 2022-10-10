@@ -13,6 +13,8 @@ import BootstrapSpinner from './Bootstrap/BootstrapSpinner'
 import BootstrapTable from './Bootstrap/BoostrapTable'
 import BootstrapTabs from './Bootstrap/BootstrapTabs'
 import BootstrapTooltip from './Bootstrap/BootstrapTooltip'
+import { CenterComponent } from './CenterComponent'
+import styled from 'styled-components'
 
 const Extra = () => {
   return (
@@ -65,3 +67,30 @@ const Extra = () => {
 }
 
 export default Extra
+
+const Wrapper = styled(CenterComponent)`
+  min-height: 100vh;
+  margin-bottom: 3rem;
+  gap: 0 3rem;
+  display: block;
+
+  .container {
+    background-color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    padding: 2rem;
+  }
+
+  .blue-button {
+    @include button;
+    background-color: $bootstrapBlue;
+    color: white;
+    display: inline;
+
+    &:hover {
+      background-color: rgba(0, 0, 255, 0.534);
+    }
+  }
+`

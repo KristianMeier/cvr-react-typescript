@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { annualReportFacts } from '../Fixtures/JsData'
-import '../Layout/scss/Review.css'
+import styled from 'styled-components'
 
 const Review = () => {
   const [readMore, setReadMore] = useState(false)
@@ -58,3 +58,47 @@ const Review = () => {
 }
 
 export default Review
+
+const Wrapper = styled.div`
+  button {
+    background-color: transparent;
+    border: none;
+    font-weight: 900;
+    transition: var(--transition);
+    color: black;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .author {
+    margin-bottom: 0.25rem;
+  }
+  .info {
+    margin-bottom: 0;
+  }
+  .previous-btn,
+  .next-btn {
+    color: grey;
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 0.5rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    justify-content: end;
+  }
+  .previous-btn:hover,
+  .next-btn:hover {
+    color: black;
+  }
+
+  h4 {
+    letter-spacing: 0.1rem;
+    line-height: 1.25;
+    align-self: flex-start;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+`
