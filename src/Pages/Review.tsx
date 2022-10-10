@@ -9,25 +9,29 @@ const Review = () => {
   const [readMore, setReadMore] = useState(false)
   const [index, setIndex] = useState(0)
   const { title, text } = annualReportFacts[index]
-  const checkNumber = (number) => {
-    if (number > annualReportFacts.length - 1) {
-      return 0
+
+  const checkArrayIndex = (arrayIndex) => {
+    const lastArrayIndex = annualReportFacts.length - 1
+    const firstFactIndex = 0
+
+    if (arrayIndex > lastArrayIndex) {
+      return firstFactIndex
     }
-    if (number < 0) {
-      return annualReportFacts.length - 1
+    if (arrayIndex < firstFactIndex) {
+      return lastArrayIndex
     }
-    return number
+    return arrayIndex
   }
   const nextFact = () => {
-    setIndex((index) => {
-      let newIndex = index + 1
-      return checkNumber(newIndex)
+    setIndex((arrayIndex) => {
+      const newArrayIndex = arrayIndex + 1
+      return checkArrayIndex(newArrayIndex)
     })
   }
   const previousFact = () => {
-    setIndex((index) => {
-      let newIndex = index - 1
-      return checkNumber(newIndex)
+    setIndex((arrayIndex) => {
+      const newArrayIndex = arrayIndex - 1
+      return checkArrayIndex(newArrayIndex)
     })
   }
 
