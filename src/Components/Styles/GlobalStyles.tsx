@@ -6,6 +6,10 @@ export const GlobalStyles = createGlobalStyle`
     --border-shadow: 0 0 10px 0 #888888;
     --transition: all 0.2s linear;
     --transform: scale(1.1);
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
 * {

@@ -51,6 +51,7 @@
 - Hvordan lægger jeg kontent ind i BasicComponent. Noget med {children} ik?
 - Hvad er der galt medmin Scss cmopiler. Jeg skal klikke Watching i bunder for at den opdatere.
 - hvordan styler men en Bootstrap Component som <AllCollapseExample /> eller {Link} fra React-router fx.
+- TODO13. Jeg vil gerne bare kunne putte en component herind og så bliver den vist som review eller accordition.
 
 # Koncept/læring
 
