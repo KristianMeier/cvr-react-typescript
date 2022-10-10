@@ -9,7 +9,7 @@ const Footer = () => {
   } = Data
 
   return (
-    <div className='footer-wrapper'>
+    <Wrapper>
       <section className='footer-section'>
         <Logo />
       </section>
@@ -54,7 +54,7 @@ const Footer = () => {
           )
         })}
       </section>
-    </div>
+    </Wrapper>
   )
 }
 

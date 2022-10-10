@@ -15,30 +15,30 @@ const LandingPageComponent = ({ data }) => {
   return (
     <>
       <SearchComponent />
-      <div className='landingpage-wrapper'>
+      <Wrapper>
         <Review />
-      </div>
-      <div className='landingpage-wrapper'>
+      </Wrapper>
+      <Wrapper>
         <Accordition />
-      </div>
-      <div className='landingpage-wrapper'>
+      </Wrapper>
+      <Wrapper>
         {secondRow.map((item) => {
           const { id, title }: TitleType = item
           return <BasicComponent key={id} title={title} />
         })}
-      </div>
-      <div className='landingpage-wrapper'>
+      </Wrapper>
+      <Wrapper>
         {thirdRow.map((item) => {
           const { id, title }: TitleType = item
           return <BasicComponent key={id} title={title} />
         })}
-      </div>
-      <div className='landingpage-wrapper'>
+      </Wrapper>
+      <Wrapper>
         {fourthRow.map((item) => {
           const { id, title }: TitleType = item
           return <BasicComponent key={id} title={title} />
         })}
-      </div>
+      </Wrapper>
     </>
   )
 }

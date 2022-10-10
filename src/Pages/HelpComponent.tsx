@@ -11,7 +11,7 @@ const HelpComponent = ({ data, removeSidebarLink, clearData }) => {
 
   return (
     <div>
-      <div className='help-wrapper'>
+      <Wrapper>
         <div className='sidebar'>
           {data.map((item) => {
             const { id, title } = item
@@ -38,7 +38,7 @@ const HelpComponent = ({ data, removeSidebarLink, clearData }) => {
             </button>
           </h5>
         </div>
-      </div>
+      </Wrapper>
     </div>
   )
 }

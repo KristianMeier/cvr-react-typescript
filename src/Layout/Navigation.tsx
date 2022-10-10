@@ -10,7 +10,7 @@ const Navigation = () => {
   } = Data
 
   return (
-    <div className='navigation-wrapper'>
+    <Wrapper>
       <picture>
         <Logo />
       </picture>
@@ -20,7 +20,7 @@ const Navigation = () => {
       {textIcons.map((item) => (
         <Icon key={item.id} {...item} />
       ))}
-    </div>
+    </Wrapper>
   )
 }
 

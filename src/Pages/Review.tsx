@@ -35,7 +35,7 @@ const Review = () => {
   }
 
   return (
-    <div className='review placeholdercontainer-wrapper'>
+    <Wrapper>
       <div className='container-place'>
         <h4 className='author'>{title}</h4>
         <p className='info'>
@@ -53,7 +53,7 @@ const Review = () => {
           </button>
         </div>
       </div>
-    </div>
+    </Wrapper>
   )
 }
 

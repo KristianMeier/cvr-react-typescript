@@ -10,15 +10,15 @@ const Header = () => {
 
   return (
     <>
-      <div className='header-wrapper'>
-        <h1>{mainTitle} </h1>
-      </div>
-      <div className='link-wrapper'>
+      <Wrapper>
+        …<h1>{mainTitle} </h1>
+      </Wrapper>
+      <Links>
         {titleLinks.map((item) => (
           <StyledLink linktype='top' size='1.2rem' key={item.id} {...item} />
         ))}
         <hr />
-      </div>
+      </Links>
     </>
   )
 }

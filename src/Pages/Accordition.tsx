@@ -2,7 +2,7 @@ import { accorditionData } from '../Fixtures/Data'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import PlaceholderContainer from '../Design/PlaceholderContainer'
+import { ComponentContainer } from '../Design/ComponentContainer'
 
 type TopicType = {
   title: string
@@ -12,7 +12,7 @@ type TopicType = {
 const Topic = ({ title, info }: TopicType) => {
   const [showInfo, setShowInfo] = useState(false)
   return (
-    <article className='topic'>
+    <TopicContainer>
       <header>
         <h4>{title}</h4>
         <button className='btn' onClick={() => setShowInfo(!showInfo)}>
@@ -20,51 +20,31 @@ const Topic = ({ title, info }: TopicType) => {
         </button>
       </header>
       {showInfo && <p>{info}</p>}
-    </article>
+    </TopicContainer>
   )
 }
 
-function Accordition() {
-  return (
-    <div className='accordition placeholdercontainer-wrapper'>
-      <div className='container-place'>
-        <section className='info'>
-          {accorditionData.map((topic) => {
-            return <Topic key={topic.id} {...topic}></Topic>
-          })}
-        </section>
-      </div>
-    </div>
-  )
-}
+const TopicContainer = styled.article`
+  padding: 1rem 1.5rem;
+  border: 2px solid #eae6eb;
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  align-self: stretch;
 
-export default Accordition
+  h4 {
+    text-transform: none;
+    line-height: 1.5;
+  }
 
-const Wrapper = styled(PlaceholderContainer)`
-  @import './PlaceHolderContainer';
+  p {
+    color: hsl(209, 34%, 30%);
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+  }
 
-  .topic {
-    padding: 1rem 1.5rem;
-    border: 2px solid #eae6eb;
-    margin-bottom: 1rem;
-    border-radius: var(--radius);
-    box-shadow: var(--light-shadow);
-    align-self: stretch;
-
-    h4 {
-      text-transform: none;
-      line-height: 1.5;
-    }
-
-    p {
-      color: hsl(209, 34%, 30%);
-      margin-bottom: 0;
-      margin-top: 0.5rem;
-    }
-
-    header h4 {
-      margin-bottom: 0;
-    }
+  header h4 {
+    margin-bottom: 0;
   }
 
   header {
@@ -88,5 +68,27 @@ const Wrapper = styled(PlaceholderContainer)`
     margin-left: 1rem;
     align-self: center;
     min-width: 2rem;
+  }
+`
+
+function Accordition() {
+  return (
+    <AccorditionWrapper>
+      <div className='container-place'>
+        <section className='info'>
+          {accorditionData.map((topic) => {
+            return <Topic key={topic.id} {...topic}></Topic>
+          })}
+        </section>
+      </div>
+    </AccorditionWrapper>
+  )
+}
+
+export default Accordition
+
+const AccorditionWrapper = styled(ComponentContainer)`
+  .info {
+    flex-shrink: 1;
   }
 `

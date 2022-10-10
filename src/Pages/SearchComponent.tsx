@@ -10,7 +10,7 @@ const SearchComponent = () => {
   } = Data
 
   return (
-    <div className='search-wrapper'>
+    <Wrapper>
       <div>
         <h1>{title}</h1>
         <SearchInput />
@@ -18,7 +18,7 @@ const SearchComponent = () => {
           <Icon {...item} key={item.id} />
         ))}
       </div>
-    </div>
+    </Wrapper>
   )
 }
 
