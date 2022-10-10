@@ -1,7 +1,7 @@
-import { Icon } from '../Components/Styles/Icon'
-import Logo from '../Components/Utils/Logo'
-import { StyledLink } from '../Components/Styles/StyledLink'
-import { Data } from '../Fixtures/Data'
+import { Icon } from '../../Components/Styles/Icon'
+import Logo from '../../Components/Utils/Logo'
+import { StyledLink } from '../../Components/Styles/StyledLink'
+import { Data } from '../../Fixtures/Data'
 import styled from 'styled-components'
 
 const Navigation = () => {

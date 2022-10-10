@@ -1,11 +1,11 @@
-import React from 'react';
+import styled from 'styled-components'
 
 const Loading = () => {
-  return (
-    <div className="loading">
-      <h1>loading...</h1>
-    </div>
-  );
-};
+  return <Wrapper>Loading...</Wrapper>
+}
 
-export default Loading;
+export default Loading
+
+const Wrapper = styled.h1`
+  letter-spacing: 0.3rem;
+`

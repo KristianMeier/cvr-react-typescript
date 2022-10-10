@@ -1,37 +1,37 @@
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import Button from '../Components/Styles/Button'
+import { ComponentContainer } from './Design/ComponentContainer'
+import Help from './Help'
+import Coloplast from './UnderConstruction'
 
 const Page = () => {
   const { routeParams } = useParams()
+  if (routeParams === 'searchresult') {
+    return <Coloplast title='Search Results' />
+  }
+  if (routeParams === 'coloplast') {
+    return <Coloplast title='coloplast' />
+  }
+  if (routeParams === 'help') {
+    return <Help />
+  }
+
   return (
     <Wrapper>
-      <section>
-        <h1>{routeParams}</h1>
-        <h2>Site Not made yet</h2>
-        <h5>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
-          dolorum quas nostrum tenetur recusandae temporibus?
-        </h5>
-        <Button title='Landing Page' link='/' />
-      </section>
+      <h1>Dette er routeParams</h1>
+      <h3>{routeParams}</h3>
+      <h6>Denne side er generisk.</h6>
+      <Button title='Landing Page' link='/' />
     </Wrapper>
   )
 }
 
-const Wrapper = styled.section`
+const Wrapper = styled(ComponentContainer)`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
-  section {
-    margin: 3rem;
-    box-shadow: 0 0 7px 0;
-    padding: 3rem;
-    border-radius: 0.5rem;
-    background-color: White;
-  }
 
   h1 {
     font-size: 4rem;

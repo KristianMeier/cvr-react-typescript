@@ -1,6 +1,6 @@
-import Logo from '../Components/Utils/Logo'
-import { StyledLink } from '../Components/Styles/StyledLink'
-import { Data } from '../Fixtures/Data'
+import Logo from '../../Components/Utils/Logo'
+import { StyledLink } from '../../Components/Styles/StyledLink'
+import { Data } from '../../Fixtures/Data'
 import styled from 'styled-components'
 
 const Footer = () => {

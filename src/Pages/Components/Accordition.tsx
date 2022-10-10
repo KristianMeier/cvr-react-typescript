@@ -1,4 +1,4 @@
-import { accorditionData } from '../Fixtures/Data'
+import { accorditionData } from '../../Fixtures/Data'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
@@ -21,6 +21,18 @@ const Topic = ({ title, info }: TopicType) => {
       </header>
       {showInfo && <p>{info}</p>}
     </TopicContainer>
+  )
+}
+
+function Accordition() {
+  return (
+    <AccorditionWrapper>
+      <section className='info'>
+        {accorditionData.map((topic) => {
+          return <Topic key={topic.id} {...topic}></Topic>
+        })}
+      </section>
+    </AccorditionWrapper>
   )
 }
 
@@ -58,6 +70,7 @@ const TopicContainer = styled.div`
     border-color: transparent;
     width: 2rem;
     height: 2rem;
+    font-size: 30px;
     background: #eae6eb;
     display: flex;
     align-items: center;
@@ -71,22 +84,8 @@ const TopicContainer = styled.div`
   }
 `
 
-function Accordition() {
-  return (
-    <AccorditionWrapper>
-      <section className='info'>
-        {accorditionData.map((topic) => {
-          return <Topic key={topic.id} {...topic}></Topic>
-        })}
-      </section>
-    </AccorditionWrapper>
-  )
-}
-
 export default Accordition
 
 const AccorditionWrapper = styled(ComponentContainer)`
-  .info {
-    flex-shrink: 1;
-  }
+  min-width: 90%;
 `

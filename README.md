@@ -53,6 +53,11 @@
 - hvordan styler men en Bootstrap Component som <AllCollapseExample /> eller {Link} fra React-router fx.
 - TODO13. Jeg vil gerne bare kunne putte en component herind og så bliver den vist som review eller accordition.
 - lav vis-mere og andre link til sorte og ikke blå.
+- Her har jeg et array, som jeg ikke bruger til noget. Der er bare 3 tal, til at mappe 3 gange.
+- Hvordan laver jeg coloplast og searchresult om til 1 fill our en route., altså den med uid
+- Få theme provider til at du
+- Få oversættelse til at du.
+- Se routing under Page. Kan man ikke gøre noget smartere.
 
 # Koncept/læring
 

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Button from '../Components/Styles/Button'
 import Loading from '../Components/Utils/Loading'
-import HelpComponent from './HelpComponent'
+import HelpComponent from './Components/HelpComponent'
 import ButtonNoLink from '../Components/Styles/ButtonNoLink'
 
 //TODO6

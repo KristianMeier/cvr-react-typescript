@@ -7,11 +7,7 @@ type ButtonNoLinkType = {
 }
 
 const ButtonNoLink = ({ text, onClick }: ButtonNoLinkType) => {
-  return (
-    <>
-      <Wrapper onClick={onClick}> {text} </Wrapper>
-    </>
-  )
+  return <Wrapper onClick={onClick}> {text} </Wrapper>
 }
 
 export default ButtonNoLink

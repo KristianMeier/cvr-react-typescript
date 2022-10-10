@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import { CenterComponent } from './CenterComponent'
 
-export const PageComponenet = styled(CenterComponent)`
+export const ComponentContainer = styled(CenterComponent)`
+  justify-content: right;
+  align-items: center;
+  min-height: 220px;
+  padding: 3rem;
   display: inline-flex;
   flex-direction: column;
   box-shadow: var(--border-shadow);

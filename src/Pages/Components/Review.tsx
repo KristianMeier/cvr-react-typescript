@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import { annualReportFacts } from '../Fixtures/JsData'
+import { annualReportFacts } from '../../Fixtures/JsData'
 import styled from 'styled-components'
 import { ComponentContainer } from '../Design/ComponentContainer'
 

@@ -11,7 +11,7 @@ export const BasicInput = styled.input.attrs((props: BasicInputProps) => ({
 }))`
   box-sizing: border-box;
   padding: 0.5rem;
-  border: 2px solid #f2f4f8;
+  border: 2px solid lightgray;
   border-radius: 0.25rem;
   margin-top: 1rem;
 `

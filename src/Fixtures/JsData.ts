@@ -1,15 +1,8 @@
 export const JsData = {
   structureData: {
-    secondRow: [
-      { id: 1, title: 'Få hjælp til Cvr' },
-      { id: 2, title: 'Skal du oprette eller ændre en virksomhed?' },
-    ],
-    thirdRow: [
-      { id: 3, title: 'Andre databaser' },
-      { id: 4, title: 'Læs mere om' },
-      { id: 5, title: 'Om CVR - Det Centrale Virksomhedsregister' },
-    ],
-    fourthRow: [{ id: 6, title: 'Menighedsråd og reelle ejere' }],
+    secondRow: [1, 2],
+    thirdRow: [3, 4, 5],
+    fourthRow: [6],
   },
   sidebarLinks: [
     { id: 23, title: 'Hjælp til CVR' },

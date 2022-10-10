@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 type IconProps = {
   faIcon: string
   id: number
@@ -5,8 +7,12 @@ type IconProps = {
 
 export const Icon = ({ faIcon, id }: IconProps) => (
   <>
-    <p key={id}>
+    <Wrapper key={id}>
       <i className={faIcon}></i>
-    </p>
+    </Wrapper>
   </>
 )
+
+const Wrapper = styled.p`
+  color: black;
+`

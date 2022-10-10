@@ -1,5 +1,5 @@
-import { StyledLink } from '../Components/Styles/StyledLink'
-import { Data } from '../Fixtures/Data'
+import { StyledLink } from '../../Components/Styles/StyledLink'
+import { Data } from '../../Fixtures/Data'
 import styled from 'styled-components'
 import { CenterComponent } from '../Design/CenterComponent'
 

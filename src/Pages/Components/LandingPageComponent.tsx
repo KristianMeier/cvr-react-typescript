@@ -6,7 +6,6 @@ import Accordition from './Accordition'
 import { CenterComponent } from '../Design/CenterComponent'
 import styled from 'styled-components'
 import { ComponentContainer } from '../Design/ComponentContainer'
-import PlaceholderContainer from '../Design/PlaceholderContainer'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -21,6 +20,7 @@ const LandingPageComponent = ({ data }) => {
       <Wrapper>
         <Accordition />
       </Wrapper>
+      {/* TODO19 */}
       <Wrapper>
         {secondRow.map((item) => {
           return <ComponentContainer />

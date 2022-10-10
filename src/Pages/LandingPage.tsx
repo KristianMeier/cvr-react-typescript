@@ -4,7 +4,7 @@ import Button from '../Components/Styles/Button'
 import ButtonNoLink from '../Components/Styles/ButtonNoLink'
 import { JsData } from '../Fixtures/JsData'
 import Loading from '../Components/Utils/Loading'
-import LandingPageComponent from './LandingPageComponent'
+import LandingPageComponent from './Components/LandingPageComponent'
 
 //TODO5
 function LandingPage() {
