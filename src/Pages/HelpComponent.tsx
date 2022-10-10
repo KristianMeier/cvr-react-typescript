@@ -10,36 +10,34 @@ const HelpComponent = ({ data, removeSidebarLink, clearData }) => {
   const { loremTwentyFive, loremHundred } = JsData
 
   return (
-    <div>
-      <Wrapper>
-        <div className='sidebar'>
-          {data.map((item) => {
-            const { id, title } = item
-            return (
-              <SidebarLink
-                key={id}
-                id={id}
-                title={title}
-                removeSidebarLink={removeSidebarLink}
-              />
-            )
-          })}
-          <button onClick={clearData}> Clear Data</button>
-        </div>
-        <div className='content'>
-          <h1>Dette er en titel</h1>
-          <h3>{loremTwentyFive.text}</h3>
-          <h5>
-            {readMore
-              ? loremHundred.text
-              : `${loremHundred.text.substring(0, 200)}...  `}
-            <button onClick={() => setReadMore(!readMore)}>
-              {readMore ? 'Vis mindre' : 'Vis resten'}
-            </button>
-          </h5>
-        </div>
-      </Wrapper>
-    </div>
+    <Wrapper>
+      <div className='sidebar'>
+        {data.map((item) => {
+          const { id, title } = item
+          return (
+            <SidebarLink
+              key={id}
+              id={id}
+              title={title}
+              removeSidebarLink={removeSidebarLink}
+            />
+          )
+        })}
+        <button onClick={clearData}> Clear Data</button>
+      </div>
+      <div className='content'>
+        <h1>Dette er en titel</h1>
+        <h3>{loremTwentyFive.text}</h3>
+        <h5>
+          {readMore
+            ? loremHundred.text
+            : `${loremHundred.text.substring(0, 200)}...  `}
+          <button onClick={() => setReadMore(!readMore)}>
+            {readMore ? 'Vis mindre' : 'Vis resten'}
+          </button>
+        </h5>
+      </div>
+    </Wrapper>
   )
 }
 

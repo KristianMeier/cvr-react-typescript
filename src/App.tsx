@@ -5,7 +5,6 @@ import Layout from './Layout/Layout'
 import LandingPage from './Pages/LandingPage'
 import Help from './Pages/Help'
 import Review from './Pages/Review'
-import Accordition from './Pages/Accordition'
 
 const App = () => (
   <BrowserRouter>
