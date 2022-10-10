@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { annualReportFacts } from '../Fixtures/JsData'
-import '../Layout/scss/PlaceHolderContainer.css'
 import '../Layout/scss/Review.css'
 
 const Review = () => {
@@ -36,7 +35,7 @@ const Review = () => {
   }
 
   return (
-    <div className='placeholdercontainer-wrapper'>
+    <div className='review placeholdercontainer-wrapper'>
       <div className='container-place'>
         <h4 className='author'>{title}</h4>
         <p className='info'>

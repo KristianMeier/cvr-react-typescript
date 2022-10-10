@@ -5,7 +5,7 @@ import Layout from './Layout/Layout'
 import LandingPage from './Pages/LandingPage'
 import Help from './Pages/Help'
 import Review from './Pages/Review'
-import Accordition from './Project/Accordition'
+import Accordition from './Pages/Accordition'
 
 const App = () => (
   <BrowserRouter>
@@ -14,7 +14,6 @@ const App = () => (
         <Route index element={<LandingPage />} />
         <Route path='help' element={<Help />} />
         <Route path='review' element={<Review />} />
-        <Route path='accordition' element={<Accordition />} />
         <Route path=':routeParams' element={<Page />} />
       </Route>
     </Routes>

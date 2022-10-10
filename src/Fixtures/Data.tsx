@@ -208,7 +208,13 @@ export const Data: DataType = {
   },
 }
 
-export const accorditionData = [
+type AccorditionDataType = {
+  id: number
+  title: string
+  info: string
+}
+
+export const accorditionData: AccorditionDataType[] = [
   {
     id: 1,
     title: 'Hvad er en forskudsopgørelse?',

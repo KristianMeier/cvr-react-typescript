@@ -32,6 +32,10 @@ function Help() {
     }
   }
 
+  const clearData = () => {
+    setData([])
+  }
+
   useEffect(() => {
     setTimeout(() => {
       fetchData()
@@ -55,10 +59,11 @@ function Help() {
     )
   return (
     <>
-      <HelpComponent data={data} removeSidebarLink={removeSidebarLink} />
-      {/* TODO10 */}
-      <ButtonNoLink text='Clear Data' onClick={() => setData([])} />
-      <ButtonNoLink text='Refresh Data' onClick={() => fetchData()} />
+      <HelpComponent
+        data={data}
+        removeSidebarLink={removeSidebarLink}
+        clearData={clearData}
+      />
     </>
   )
 }

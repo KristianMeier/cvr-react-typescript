@@ -1,34 +1,60 @@
-.info {
-  flex-shrink: 1;
+.placeholdercontainer-wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: var(--border-shadow);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  justify-content: right;
+  align-items: center;
+  min-height: 220px;
+  padding: 1rem;
+}
+.placeholdercontainer-wrapper h3 {
+  align-self: flex-start;
+  margin-top: 2.5rem;
+  font-weight: 300;
+}
+.placeholdercontainer-wrapper .filter {
+  margin-top: 1rem;
+  text-align: right;
+}
+.placeholdercontainer-wrapper .container-place {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.topic {
+.accordition .topic {
   padding: 1rem 1.5rem;
   border: 2px solid #eae6eb;
   margin-bottom: 1rem;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
+  align-self: stretch;
 }
-.topic h4 {
+.accordition .topic h4 {
   text-transform: none;
   line-height: 1.5;
 }
-.topic p {
+.accordition .topic p {
   color: hsl(209deg, 34%, 30%);
   margin-bottom: 0;
   margin-top: 0.5rem;
 }
-.topic header h4 {
+.accordition .topic header h4 {
   margin-bottom: 0;
 }
-
-header {
+.accordition header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.btn {
+.accordition .btn {
   background: transparent;
   border-color: transparent;
   width: 2rem;
@@ -38,7 +64,7 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: hsl(0deg, 67%, 44%);
+  color: black;
   cursor: pointer;
   margin-left: 1rem;
   align-self: center;

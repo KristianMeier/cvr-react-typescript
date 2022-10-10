@@ -1,29 +1,53 @@
-p {
-  color: hsl(210deg, 22%, 49%);
+.placeholdercontainer-wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: var(--border-shadow);
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  background-color: white;
+  justify-content: right;
+  align-items: center;
+  min-height: 220px;
+  padding: 1rem;
+}
+.placeholdercontainer-wrapper h3 {
+  align-self: flex-start;
+  margin-top: 2.5rem;
+  font-weight: 300;
+}
+.placeholdercontainer-wrapper .filter {
+  margin-top: 1rem;
+  text-align: right;
+}
+.placeholdercontainer-wrapper .container-place {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-button {
+.review button {
   background-color: transparent;
   border: none;
   font-weight: 900;
   transition: var(--transition);
   color: darkblue;
 }
-button:hover {
+.review button:hover {
   transform: scale(1.05);
 }
-
-.author {
+.review .author {
   margin-bottom: 0.25rem;
 }
-
-.info {
+.review .info {
   margin-bottom: 0;
 }
-
-.previous-btn,
-.next-btn {
-  color: hsl(205deg, 90%, 76%);
+.review .previous-btn,
+.review .next-btn {
+  color: grey;
   font-size: 1.25rem;
   background: transparent;
   border-color: transparent;
@@ -32,13 +56,11 @@ button:hover {
   cursor: pointer;
   justify-content: end;
 }
-
-.previous-btn:hover,
-.next-btn:hover {
-  color: hsl(205deg, 78%, 60%);
+.review .previous-btn:hover,
+.review .next-btn:hover {
+  color: black;
 }
-
-h4 {
+.review h4 {
   letter-spacing: 0.1rem;
   line-height: 1.25;
   align-self: flex-start;

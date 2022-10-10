@@ -6,6 +6,7 @@ import { TitleType } from '../Components/Types'
 import '../Layout/scss/LandingPage.css'
 import '../Layout/scss/Review.css'
 import Review from './Review'
+import Accordition from './Accordition'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -16,6 +17,9 @@ const LandingPageComponent = ({ data }) => {
       <SearchComponent />
       <div className='landingpage-wrapper'>
         <Review />
+      </div>
+      <div className='landingpage-wrapper'>
+        <Accordition />
       </div>
       <div className='landingpage-wrapper'>
         {secondRow.map((item) => {

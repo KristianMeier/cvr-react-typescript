@@ -1,10 +1,14 @@
 import { accorditionData } from '../Fixtures/Data'
 import { useState } from 'react'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import '../Layout/scss/PlaceHolderContainer.css'
 import '../Layout/scss/Accordition.css'
 
-const Topic = ({ title, info }) => {
+type TopicType = {
+  title: string
+  info: string
+}
+
+const Topic = ({ title, info }: TopicType) => {
   const [showInfo, setShowInfo] = useState(false)
   return (
     <article className='topic'>
@@ -21,7 +25,7 @@ const Topic = ({ title, info }) => {
 
 function Accordition() {
   return (
-    <div className='placeholdercontainer-wrapper'>
+    <div className='accordition placeholdercontainer-wrapper'>
       <div className='container-place'>
         <section className='info'>
           {accorditionData.map((topic) => {
