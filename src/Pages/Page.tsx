@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import Button from '../Components/Styles/Button'
 import { ComponentContainer } from './Design/ComponentContainer'
-import Help from './Help'
 import Coloplast from './UnderConstruction'
 
 const Page = () => {
@@ -12,9 +11,6 @@ const Page = () => {
   }
   if (routeParams === 'coloplast') {
     return <Coloplast title='coloplast' />
-  }
-  if (routeParams === 'help') {
-    return <Help />
   }
 
   return (

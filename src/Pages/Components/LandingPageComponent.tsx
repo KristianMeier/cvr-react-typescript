@@ -1,11 +1,12 @@
 //TODO3
 //@ts-nocheck
-import SearchComponent from './SearchComponent'
-import Review from './Review'
-import Accordition from './Accordition'
+
 import { CenterComponent } from '../Design/CenterComponent'
 import styled from 'styled-components'
 import { ComponentContainer } from '../Design/ComponentContainer'
+import Review from './Review'
+import Accordition from './Accordition'
+import SearchComponent from './SearchComponent'
 
 const LandingPageComponent = ({ data }) => {
   const {
