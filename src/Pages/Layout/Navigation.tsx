@@ -1,23 +1,37 @@
 import { Icon } from "../../Styles/Icon";
 import { StyledLink } from "../../Styles/StyledLink";
-import { Data } from "../../Fixtures/Types";
 import styled from "styled-components";
 import Logo from "../../Styles/Logo";
+import { useEffect, useState } from "react";
+import { DataType } from "../../Fixtures/Types";
+import { getData } from "../../Services/ApiService";
 
 const Navigation = () => {
-  const {
-    navbar: { textIcons },
-  } = Data;
+  const [data, setData] = useState<DataType>();
+
+  const getTheData = async () => {
+    const response = await getData("data/Data.json");
+
+    setData(response.data);
+  };
+
+  useEffect(() => {
+    getTheData();
+  }, []);
+
+  if (data === undefined) {
+    return <div>NOPE!</div>;
+  }
 
   return (
     <Wrapper>
       <picture>
         <Logo />
       </picture>
-      {textIcons.map((item) => (
+      {data.navbar.textIcons.map((item) => (
         <StyledLink key={item.id} {...item} />
       ))}
-      {textIcons.map((item) => (
+      {data.navbar.textIcons.map((item) => (
         <Icon key={item.id} {...item} />
       ))}
     </Wrapper>

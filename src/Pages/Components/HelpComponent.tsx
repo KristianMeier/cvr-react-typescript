@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SidebarLink from "../../Styles/SidebarLink";
-import { JsData } from "../../Fixtures/JsData";
 import styled from "styled-components";
 import { CenterComponent } from "../Design/CenterComponent";
 import { JsonResponse } from "../Help";
 import ReadMoreButton from "./ReadMoreButton";
+import { JsData } from "../../Fixtures/Types";
+import { getData } from "../../Services/ApiService";
 
 type Props = {
   data: JsonResponse;
@@ -14,7 +15,22 @@ type Props = {
 
 const HelpComponent = ({ data, removeSidebarLink, clearData }: Props) => {
   const [readMore, setReadMore] = useState(true);
-  const { loremTwentyFive, loremHundred } = JsData;
+
+  const [fuck, setFuck] = useState<JsData>();
+
+  const getTheData = async () => {
+    const response = await getData("data/JsData.json");
+
+    setFuck(response.data);
+  };
+
+  useEffect(() => {
+    getTheData();
+  }, []);
+
+  if (fuck === undefined) {
+    return <div>Nope</div>;
+  }
 
   return (
     <Wrapper>
@@ -34,11 +50,11 @@ const HelpComponent = ({ data, removeSidebarLink, clearData }: Props) => {
       </div>
       <div className="content">
         <h1>Dette er en titel</h1>
-        <h3>{loremTwentyFive.text}</h3>
+        <h3>{fuck.loremTwentyFive.text}</h3>
         <h5>
           {readMore
-            ? loremHundred.text
-            : `${loremHundred.text.substring(0, 200)}...  `}
+            ? fuck.loremHundred.text
+            : `${fuck.loremHundred.text.substring(0, 200)}...  `}
           <ReadMoreButton
             onClick={() => setReadMore(!readMore)}
             readMore={readMore}

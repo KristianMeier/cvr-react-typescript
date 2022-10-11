@@ -1,3 +1,12 @@
+export type JsData = {
+  loremTwentyFive: {
+    text: string;
+  };
+  loremHundred: {
+    text: string;
+  };
+};
+
 export type Icon = {
   id: number;
   text: string;
@@ -38,4 +47,10 @@ export type AccorditionDataType = {
   id: number;
   title: string;
   info: string;
+};
+
+export type AnnualReportFacts = {
+  id: number;
+  title: string;
+  text: string;
 };

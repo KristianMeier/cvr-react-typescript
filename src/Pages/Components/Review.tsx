@@ -1,17 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { annualReportFacts } from "../../Fixtures/JsData";
 import styled from "styled-components";
+import { AnnualReportFacts } from "../../Fixtures/Types";
+import { getData } from "../../Services/ApiService";
 import { ComponentContainer } from "../Design/ComponentContainer";
 import ReadMoreButton from "./ReadMoreButton";
 
 const Review = () => {
+  const [data, setData] = useState<AnnualReportFacts[]>([]);
+
+  const getTheData = async () => {
+    const response = await getData("data/AnnualReportFacts.json");
+
+    setData(response.data);
+  };
+
+  useEffect(() => {
+    getTheData();
+  }, []);
+
   const [readMore, setReadMore] = useState(false);
   const [index, setIndex] = useState(0);
-  const { title, text } = annualReportFacts[index];
 
   const checkArrayIndex = (arrayIndex: number) => {
-    const lastArrayIndex = annualReportFacts.length - 1;
+    const lastArrayIndex = data.length - 1;
     const firstFactIndex = 0;
 
     if (arrayIndex > lastArrayIndex) {
@@ -35,11 +47,17 @@ const Review = () => {
     });
   };
 
+  if (data.length === 0) {
+    return <div>Joe</div>;
+  }
+
   return (
     <Wrapper>
-      <h4 className="author">{title}</h4>
+      <h4 className="author">{data[index].title}</h4>
       <p className="info">
-        {readMore ? text : `${text.substring(0, 350)}...`}
+        {readMore
+          ? data[index].text
+          : `${data[index].text.substring(0, 350)}...`}
         <ReadMoreButton
           onClick={() => setReadMore(!readMore)}
           readMore={readMore}

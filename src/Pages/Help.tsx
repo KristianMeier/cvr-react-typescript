@@ -10,7 +10,6 @@ export type JsonResponse = {
   title: string;
 }[];
 
-//TODO6
 function Help() {
   const url = "Data/JsonData.json";
 

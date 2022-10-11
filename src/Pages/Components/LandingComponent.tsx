@@ -15,7 +15,6 @@ const LandingComponent = () => {
       <Wrapper>
         <Forskuds />
       </Wrapper>
-      {/* TODO19 */}
       <Wrapper>
         <Placeholder />
         <Placeholder />
