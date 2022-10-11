@@ -1,23 +1,23 @@
-import { SearchInput } from '../../Styles/SearchInput'
-import { Data } from '../../Fixtures/Data'
-import styled from 'styled-components'
+import { SearchInput } from "../../Styles/SearchInput";
+import { Data } from "../../Fixtures/Types";
+import styled from "styled-components";
 
-import { ComponentContainer } from '../Design/ComponentContainer'
+import { ComponentContainer } from "../Design/ComponentContainer";
 
 const SearchComponent = () => {
   const {
     search: { title },
-  } = Data
+  } = Data;
 
   return (
     <Wrapper>
       <h1>{title}</h1>
       <SearchInput />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default SearchComponent
+export default SearchComponent;
 
 const Wrapper = styled(ComponentContainer)`
   justify-content: right;
@@ -27,4 +27,4 @@ const Wrapper = styled(ComponentContainer)`
     text-align: center;
     font-weight: 300;
   }
-`
+`;

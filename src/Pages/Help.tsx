@@ -1,62 +1,61 @@
-//@ts-nocheck
-import { useState, useEffect } from 'react'
-import Button from '../Styles/Button'
-import Loading from '../Styles/Loading'
-import HelpComponent from './Components/HelpComponent'
-import ButtonNoLink from '../Styles/ButtonNoLink'
+import { useState, useEffect } from "react";
+import Button from "../Styles/Button";
+import Loading from "../Styles/Loading";
+import HelpComponent from "./Components/HelpComponent";
+import ButtonNoLink from "../Styles/ButtonNoLink";
+import { getData } from "../Services/ApiService";
+
+export type JsonResponse = {
+  id: number;
+  title: string;
+}[];
 
 //TODO6
 function Help() {
-  const url = 'JsonData.json'
-  const [loading, setLoading] = useState(true)
-  const [data, setData] = useState([])
-  const [hasError, setError] = useState(false)
+  const url = "Data/JsonData.json";
 
-  const removeSidebarLink = (id) => {
-    const filteredData = data.filter((item) => item.id !== id)
-    setData(filteredData)
-  }
+  const [error, setError] = useState<any>("");
+  const [data, setData] = useState<JsonResponse | null>(null);
 
-  const fetchData = async () => {
-    setLoading(true)
-    try {
-      const response = await fetch(url)
-      const fetchedData = await response.json()
-      setLoading(false)
-      setData(fetchedData)
-      //TODO4
-    } catch (error) {
-      console.error(error)
-      setLoading(false)
-      setError(true)
-    }
-  }
+  const getTheData = async () => {
+    const response: { data: JsonResponse; error?: any } = await getData(url);
 
-  const clearData = () => {
-    setData([])
-  }
+    setError(response.error);
+    setData(response.data);
+  };
 
   useEffect(() => {
-    setTimeout(() => {
-      fetchData()
-    }, 750)
-  }, [])
+    getTheData();
+  }, []);
 
-  if (hasError)
+  if (!data) {
+    return <div>Nope</div>;
+  }
+
+  const removeSidebarLink = (id: number) => {
+    const filteredData = data.filter((item) => item.id !== id);
+    setData(filteredData);
+  };
+
+  const clearData = () => {
+    setData([]);
+  };
+
+  if (error)
     return (
       <div>
-        <h2> Can't get data </h2>
-        <Button link='/' title='Landing Page' />
+        <h2> {error} </h2>
+        <Button link="/" title="Landing Page" />
       </div>
-    )
-  if (loading) return <Loading />
+    );
+
   if (data.length === 0)
     return (
       <>
-        <h2>Access to date, but there is none. </h2>{' '}
-        <ButtonNoLink text='Refresh Data' onClick={() => fetchData()} />
+        <h2>Access to date, but there is none. </h2>
+        <ButtonNoLink text="Refresh Data" onClick={() => getTheData()} />
       </>
-    )
+    );
   return (
     <>
       <HelpComponent
@@ -65,7 +64,7 @@ function Help() {
         clearData={clearData}
       />
     </>
-  )
+  );
 }
 
-export default Help
+export default Help;

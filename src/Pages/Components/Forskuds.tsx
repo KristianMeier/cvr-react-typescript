@@ -1,17 +1,17 @@
-import { accorditionData } from '../../Fixtures/Data'
-import { ComponentContainer } from '../Design/ComponentContainer'
-import { ForskudsTopic } from './ForskudsTopic'
+import { accorditionData } from "../../Fixtures/Types";
+import { ComponentContainer } from "../Design/ComponentContainer";
+import { ForskudsTopic } from "./ForskudsTopic";
 
 function Forskuds() {
   return (
     <ComponentContainer>
-      <section className='info'>
+      <section className="info">
         {accorditionData.map((topic) => {
-          return <ForskudsTopic key={topic.id} {...topic}></ForskudsTopic>
+          return <ForskudsTopic key={topic.id} {...topic}></ForskudsTopic>;
         })}
       </section>
     </ComponentContainer>
-  )
+  );
 }
 
-export default Forskuds
+export default Forskuds;

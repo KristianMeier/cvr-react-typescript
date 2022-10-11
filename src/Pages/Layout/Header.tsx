@@ -1,12 +1,12 @@
-import { StyledLink } from '../../Styles/StyledLink'
-import { Data } from '../../Fixtures/Data'
-import styled from 'styled-components'
-import { CenterComponent } from '../Design/CenterComponent'
+import { StyledLink } from "../../Styles/StyledLink";
+import { Data } from "../../Fixtures/Types";
+import styled from "styled-components";
+import { CenterComponent } from "../Design/CenterComponent";
 
 const Header = () => {
   const {
     title: { mainTitle, titleLinks },
-  } = Data
+  } = Data;
 
   return (
     <>
@@ -15,15 +15,15 @@ const Header = () => {
       </Wrapper>
       <Links>
         {titleLinks.map((item) => (
-          <StyledLink linktype='top' size='1.2rem' key={item.id} {...item} />
+          <StyledLink linktype="top" size="1.2rem" key={item.id} {...item} />
         ))}
         <hr />
       </Links>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const Wrapper = styled(CenterComponent)`
   display: flex;
@@ -43,7 +43,7 @@ const Wrapper = styled(CenterComponent)`
       font-size: 2rem;
     }
   }
-`
+`;
 
 const Links = styled(CenterComponent)`
   align-self: flex-start;
@@ -55,4 +55,4 @@ const Links = styled(CenterComponent)`
     margin-bottom: 1rem;
     max-width: 24rem;
   }
-`
+`;

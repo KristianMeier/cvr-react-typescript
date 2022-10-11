@@ -1,13 +1,13 @@
-import { Icon } from '../../Styles/Icon'
-import { StyledLink } from '../../Styles/StyledLink'
-import { Data } from '../../Fixtures/Data'
-import styled from 'styled-components'
-import Logo from '../../Styles/Logo'
+import { Icon } from "../../Styles/Icon";
+import { StyledLink } from "../../Styles/StyledLink";
+import { Data } from "../../Fixtures/Types";
+import styled from "styled-components";
+import Logo from "../../Styles/Logo";
 
 const Navigation = () => {
   const {
     navbar: { textIcons },
-  } = Data
+  } = Data;
 
   return (
     <Wrapper>
@@ -21,10 +21,10 @@ const Navigation = () => {
         <Icon key={item.id} {...item} />
       ))}
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;
 
 const Wrapper = styled.nav`
   position: fixed;
@@ -71,4 +71,4 @@ const Wrapper = styled.nav`
       display: none;
     }
   }
-`
+`;
