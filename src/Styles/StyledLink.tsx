@@ -1,14 +1,15 @@
-import styled, { css } from 'styled-components'
+// @ts-nocheck
+import styled, { css } from "styled-components";
 
 type LinkProps = {
-  odd?: boolean
-  first?: boolean
-  linktype?: string
-  link: string
-  text: string
-  size?: string
-  bold?: number
-}
+  odd?: boolean;
+  first?: boolean;
+  linktype?: string;
+  link: string;
+  text: string;
+  size?: string;
+  bold?: number;
+};
 
 export const StyledLink = ({
   odd,
@@ -20,7 +21,6 @@ export const StyledLink = ({
   bold,
 }: LinkProps) => {
   return (
-    // @ts-ignore-next-line
     <Link
       odd={odd}
       first={first}
@@ -32,8 +32,8 @@ export const StyledLink = ({
     >
       {text}
     </Link>
-  )
-}
+  );
+};
 
 const Link = styled.a<LinkProps>`
   text-decoration: none;
@@ -48,22 +48,22 @@ const Link = styled.a<LinkProps>`
   font-size: ${({ size }: LinkProps) => size};
   font-weight: ${({ bold }: LinkProps) => (bold ? 750 : 250)};
   ${({ linktype }: LinkProps) => {
-    if (linktype === 'top') {
+    if (linktype === "top") {
       return css`
         margin-top: 2rem;
         display: inline-block;
         margin-right: 2.2rem;
-      `
+      `;
     }
-    if (linktype === 'footer') {
+    if (linktype === "footer") {
       return css`
         display: block;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         font-weight: 300;
-      `
+      `;
     }
-    return css``
+    return css``;
   }}
 
   ${({ odd }: LinkProps) => {
@@ -71,7 +71,7 @@ const Link = styled.a<LinkProps>`
       ? css`
           font-weight: 800;
         `
-      : css``
+      : css``;
   }}
   
   ${({ first }: LinkProps) => {
@@ -79,6 +79,6 @@ const Link = styled.a<LinkProps>`
       ? css`
           font-weight: 800;
         `
-      : css``
+      : css``;
   }}
-`
+`;

@@ -1,64 +1,78 @@
-import { StyledLink } from '../../Styles/StyledLink'
-import { Data } from '../../Fixtures/Data'
-import styled from 'styled-components'
-import Logo from '../../Styles/Logo'
+import { StyledLink } from "../../Styles/StyledLink";
+import styled from "styled-components";
+import Logo from "../../Styles/Logo";
+import { useState, useEffect } from "react";
+import { DataType } from "../../Fixtures/Types";
+import { getData } from "../../Services/ApiService";
 
 const Footer = () => {
-  const {
-    footer: { firstColumn, secondColumn, thirdColumn },
-  } = Data
+  const [data, setData] = useState<DataType>();
+
+  const getTheData = async () => {
+    const response = await getData("data/Data.json");
+
+    setData(response.data);
+  };
+
+  useEffect(() => {
+    getTheData();
+  }, []);
+
+  if (data === undefined) {
+    return <div>NOPE!</div>;
+  }
 
   return (
     <Wrapper>
-      <section className='footer-section'>
+      <section className="footer-section">
         <Logo />
       </section>
-      <section className='footer-section'>
-        {firstColumn.map((item, index) => {
+      <section className="footer-section">
+        {data.footer.firstColumn.map((item, index) => {
           return (
             <StyledLink
               odd={(index + 1) % 2 !== 0}
-              linktype='footer'
+              linktype="footer"
               {...item}
               key={item.id}
-              size='1rem'
+              size="1rem"
             />
-          )
+          );
         })}
         <hr />
       </section>
-      <section className='footer-section'>
-        {secondColumn.map((item, index) => {
+      <section className="footer-section">
+        {data.footer.secondColumn.map((item, index) => {
           return (
             <StyledLink
               first={index === 0}
-              linktype='footer'
+              linktype="footer"
               {...item}
               key={item.id}
-              size='1rem'
+              size="1rem"
             />
-          )
+          );
         })}
         <hr />
       </section>
-      <section className='footer-section'>
-        {thirdColumn.map((item, index) => {
+      <section className="footer-section">
+        {data.footer.thirdColumn.map((item, index) => {
           return (
             <StyledLink
               first={index === 0}
-              linktype='footer'
+              linktype="footer"
               {...item}
               key={item.id}
-              size='1rem'
+              size="1rem"
             />
-          )
+          );
         })}
       </section>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 const Wrapper = styled.footer`
   min-height: 19rem;
@@ -97,4 +111,4 @@ const Wrapper = styled.footer`
       margin-top: 5rem;
     }
   }
-`
+`;

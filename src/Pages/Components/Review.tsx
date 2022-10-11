@@ -1,62 +1,81 @@
-// @ts-nocheck
-import { useState } from 'react'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import { annualReportFacts } from '../../Fixtures/JsData'
-import styled from 'styled-components'
-import { ComponentContainer } from '../Design/ComponentContainer'
+import { useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import styled from "styled-components";
+import { AnnualReportFacts } from "../../Fixtures/Types";
+import { getData } from "../../Services/ApiService";
+import { ComponentContainer } from "../Design/ComponentContainer";
+import ReadMoreButton from "./ReadMoreButton";
 
 const Review = () => {
-  const [readMore, setReadMore] = useState(false)
-  const [index, setIndex] = useState(0)
-  const { title, text } = annualReportFacts[index]
+  const [data, setData] = useState<AnnualReportFacts[]>([]);
 
-  const checkArrayIndex = (arrayIndex) => {
-    const lastArrayIndex = annualReportFacts.length - 1
-    const firstFactIndex = 0
+  const getTheData = async () => {
+    const response = await getData("data/AnnualReportFacts.json");
+
+    setData(response.data);
+  };
+
+  useEffect(() => {
+    getTheData();
+  }, []);
+
+  const [readMore, setReadMore] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const checkArrayIndex = (arrayIndex: number) => {
+    const lastArrayIndex = data.length - 1;
+    const firstFactIndex = 0;
 
     if (arrayIndex > lastArrayIndex) {
-      return firstFactIndex
+      return firstFactIndex;
     }
     if (arrayIndex < firstFactIndex) {
-      return lastArrayIndex
+      return lastArrayIndex;
     }
-    return arrayIndex
-  }
+    return arrayIndex;
+  };
   const nextFact = () => {
     setIndex((arrayIndex) => {
-      const newArrayIndex = arrayIndex + 1
-      return checkArrayIndex(newArrayIndex)
-    })
-  }
+      const newArrayIndex = arrayIndex + 1;
+      return checkArrayIndex(newArrayIndex);
+    });
+  };
   const previousFact = () => {
     setIndex((arrayIndex) => {
-      const newArrayIndex = arrayIndex - 1
-      return checkArrayIndex(newArrayIndex)
-    })
+      const newArrayIndex = arrayIndex - 1;
+      return checkArrayIndex(newArrayIndex);
+    });
+  };
+
+  if (data.length === 0) {
+    return <div>Joe</div>;
   }
 
   return (
     <Wrapper>
-      <h4 className='author'>{title}</h4>
-      <p className='info'>
-        {readMore ? text : `${text.substring(0, 350)}...  `}
-        <button onClick={() => setReadMore(!readMore)}>
-          {readMore ? 'Vis mindre' : 'Vis resten'}
-        </button>
+      <h4 className="author">{data[index].title}</h4>
+      <p className="info">
+        {readMore
+          ? data[index].text
+          : `${data[index].text.substring(0, 350)}...`}
+        <ReadMoreButton
+          onClick={() => setReadMore(!readMore)}
+          readMore={readMore}
+        />
       </p>
-      <div className='button-container'>
-        <button className='previous-btn' onClick={previousFact}>
+      <div className="button-container">
+        <button className="previous-btn" onClick={previousFact}>
           <FaChevronLeft />
         </button>
-        <button className='next-btn' onClick={nextFact}>
+        <button className="next-btn" onClick={nextFact}>
           <FaChevronRight />
         </button>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Review
+export default Review;
 
 const Wrapper = styled(ComponentContainer)`
   button {
@@ -100,4 +119,4 @@ const Wrapper = styled(ComponentContainer)`
     font-size: 1.75rem;
     margin-bottom: 1rem;
   }
-`
+`;

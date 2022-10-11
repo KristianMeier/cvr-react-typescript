@@ -1,16 +1,15 @@
-// @ts-nocheck
-
-import styled from 'styled-components'
+import styled from "styled-components";
 
 type ButtonNoLinkType = {
-  text: string
-}
+  text: string;
+  onClick: () => void;
+};
 
 const ButtonNoLink = ({ text, onClick }: ButtonNoLinkType) => {
-  return <Wrapper onClick={onClick}> {text} </Wrapper>
-}
+  return <Wrapper onClick={onClick}> {text} </Wrapper>;
+};
 
-export default ButtonNoLink
+export default ButtonNoLink;
 
 const Wrapper = styled.button`
   text-transform: uppercase;
@@ -31,4 +30,4 @@ const Wrapper = styled.button`
     color: white;
     background: black;
   }
-`
+`;

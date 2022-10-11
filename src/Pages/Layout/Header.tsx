@@ -1,29 +1,43 @@
-import { StyledLink } from '../../Styles/StyledLink'
-import { Data } from '../../Fixtures/Data'
-import styled from 'styled-components'
-import { CenterComponent } from '../Design/CenterComponent'
+import { StyledLink } from "../../Styles/StyledLink";
+import { DataType } from "../../Fixtures/Types";
+import styled from "styled-components";
+import { CenterComponent } from "../Design/CenterComponent";
+import { useEffect, useState } from "react";
+import { getData } from "../../Services/ApiService";
 
 const Header = () => {
-  const {
-    title: { mainTitle, titleLinks },
-  } = Data
+  const [data, setData] = useState<DataType>();
+
+  const getTheData = async () => {
+    const response = await getData("data/Data.json");
+
+    setData(response.data);
+  };
+
+  useEffect(() => {
+    getTheData();
+  }, []);
+
+  if (data === undefined) {
+    return <div>NOPE!</div>;
+  }
 
   return (
     <>
       <Wrapper>
-        <h1>{mainTitle} </h1>
+        <h1>{data.title.mainTitle} </h1>
       </Wrapper>
       <Links>
-        {titleLinks.map((item) => (
-          <StyledLink linktype='top' size='1.2rem' key={item.id} {...item} />
+        {data.title.titleLinks.map((item) => (
+          <StyledLink linktype="top" size="1.2rem" key={item.id} {...item} />
         ))}
         <hr />
       </Links>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 
 const Wrapper = styled(CenterComponent)`
   display: flex;
@@ -43,7 +57,7 @@ const Wrapper = styled(CenterComponent)`
       font-size: 2rem;
     }
   }
-`
+`;
 
 const Links = styled(CenterComponent)`
   align-self: flex-start;
@@ -55,4 +69,4 @@ const Links = styled(CenterComponent)`
     margin-bottom: 1rem;
     max-width: 24rem;
   }
-`
+`;
