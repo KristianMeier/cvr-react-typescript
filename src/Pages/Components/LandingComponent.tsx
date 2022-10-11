@@ -8,7 +8,7 @@ import Forskuds from './Forskuds'
 import SearchComponent from './SearchComponent'
 import Placeholder from './PlaceholderComponent'
 
-const LandingPageComponent = ({ data }) => {
+const LandingComponent = ({ data }) => {
   const {
     structureData: { secondRow, thirdRow, fourthRow },
   } = data
@@ -41,7 +41,7 @@ const LandingPageComponent = ({ data }) => {
   )
 }
 
-export default LandingPageComponent
+export default LandingComponent
 
 const Wrapper = styled(CenterComponent)`
   @media screen and (min-width: 1024px) {

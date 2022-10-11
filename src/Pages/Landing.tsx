@@ -4,10 +4,10 @@ import Button from '../Styles/Button'
 import ButtonNoLink from '../Styles/ButtonNoLink'
 import { JsData } from '../Fixtures/JsData'
 import Loading from '../Styles/Loading'
-import LandingPageComponent from './Components/LandingPageComponent'
+import LandingComponent from './Components/LandingComponent'
 
 //TODO5
-function LandingPage() {
+function Landing() {
   const url = 'JsonDataTwo.json'
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
@@ -54,7 +54,7 @@ function LandingPage() {
         ></ButtonNoLink>
       </>
     )
-  return <LandingPageComponent data={JsData} />
+  return <LandingComponent data={JsData} />
 }
 
-export default LandingPage
+export default Landing

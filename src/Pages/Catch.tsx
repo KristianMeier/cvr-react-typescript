@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { ComponentContainer } from './Design/ComponentContainer'
 
-const Page = () => {
+const Catch = () => {
   const { routeParams } = useParams()
   if (routeParams === 'searchresult') {
     return <ComponentContainer>Search Results - Unfinished</ComponentContainer>
@@ -14,4 +14,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Catch
