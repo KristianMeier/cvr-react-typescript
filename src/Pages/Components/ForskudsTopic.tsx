@@ -1,38 +1,27 @@
-import { accorditionData } from '../../Fixtures/Data'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import { ComponentContainer } from '../Design/ComponentContainer'
 
-type TopicType = {
+type ForskudsTopicType = {
   title: string
   info: string
 }
 
-const Topic = ({ title, info }: TopicType) => {
+export const ForskudsTopic = ({ title, info }: ForskudsTopicType) => {
   const [showInfo, setShowInfo] = useState(false)
   return (
     <TopicContainer>
       <header>
         <h4>{title}</h4>
-        <button className='btn' onClick={() => setShowInfo(!showInfo)}>
+        <button
+          className='accordition-btn'
+          onClick={() => setShowInfo(!showInfo)}
+        >
           {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
       </header>
       {showInfo && <p>{info}</p>}
     </TopicContainer>
-  )
-}
-
-function Accordition() {
-  return (
-    <AccorditionWrapper>
-      <section className='info'>
-        {accorditionData.map((topic) => {
-          return <Topic key={topic.id} {...topic}></Topic>
-        })}
-      </section>
-    </AccorditionWrapper>
   )
 }
 
@@ -65,13 +54,12 @@ const TopicContainer = styled.div`
     align-items: center;
   }
 
-  .btn {
+  .accordition-btn {
     background: transparent;
     border-color: transparent;
     width: 2rem;
     height: 2rem;
-    font-size: 30px;
-    background: #eae6eb;
+    background: lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,10 +70,4 @@ const TopicContainer = styled.div`
     align-self: center;
     min-width: 2rem;
   }
-`
-
-export default Accordition
-
-const AccorditionWrapper = styled(ComponentContainer)`
-  min-width: 90%;
 `

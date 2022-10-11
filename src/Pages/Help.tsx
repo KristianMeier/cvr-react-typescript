@@ -1,9 +1,9 @@
 //@ts-nocheck
 import { useState, useEffect } from 'react'
-import Button from '../Components/Styles/Button'
-import Loading from '../Components/Utils/Loading'
+import Button from '../Styles/Button'
+import Loading from '../Styles/Loading'
 import HelpComponent from './Components/HelpComponent'
-import ButtonNoLink from '../Components/Styles/ButtonNoLink'
+import ButtonNoLink from '../Styles/ButtonNoLink'
 
 //TODO6
 function Help() {

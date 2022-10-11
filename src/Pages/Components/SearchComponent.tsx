@@ -1,4 +1,4 @@
-import { SearchInput } from '../../Components/Styles/SearchInput'
+import { SearchInput } from '../../Styles/SearchInput'
 import { Data } from '../../Fixtures/Data'
 import styled from 'styled-components'
 

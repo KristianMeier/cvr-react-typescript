@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { useState, useEffect } from 'react'
-import Button from '../Components/Styles/Button'
-import ButtonNoLink from '../Components/Styles/ButtonNoLink'
+import Button from '../Styles/Button'
+import ButtonNoLink from '../Styles/ButtonNoLink'
 import { JsData } from '../Fixtures/JsData'
-import Loading from '../Components/Utils/Loading'
+import Loading from '../Styles/Loading'
 import LandingPageComponent from './Components/LandingPageComponent'
 
 //TODO5

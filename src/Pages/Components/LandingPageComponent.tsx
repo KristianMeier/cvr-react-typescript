@@ -3,10 +3,10 @@
 
 import { CenterComponent } from '../Design/CenterComponent'
 import styled from 'styled-components'
-import { ComponentContainer } from '../Design/ComponentContainer'
 import Review from './Review'
-import Accordition from './Accordition'
+import Forskuds from './Forskuds'
 import SearchComponent from './SearchComponent'
+import Placeholder from './PlaceholderComponent'
 
 const LandingPageComponent = ({ data }) => {
   const {
@@ -19,22 +19,22 @@ const LandingPageComponent = ({ data }) => {
         <Review />
       </Wrapper>
       <Wrapper>
-        <Accordition />
+        <Forskuds />
       </Wrapper>
       {/* TODO19 */}
       <Wrapper>
         {secondRow.map((item) => {
-          return <ComponentContainer />
+          return <Placeholder />
         })}
       </Wrapper>
       <Wrapper>
         {thirdRow.map((item) => {
-          return <ComponentContainer />
+          return <Placeholder />
         })}
       </Wrapper>
       <Wrapper>
         {fourthRow.map((item) => {
-          return <ComponentContainer />
+          return <Placeholder />
         })}
       </Wrapper>
     </>

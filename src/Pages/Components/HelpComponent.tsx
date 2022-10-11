@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { useState } from 'react'
-import SidebarLink from '../../Components/Styles/SidebarLink'
+import SidebarLink from '../../Styles/SidebarLink'
 import { JsData } from '../../Fixtures/JsData'
 import styled from 'styled-components'
 import { CenterComponent } from '../Design/CenterComponent'

@@ -20,7 +20,7 @@
     "src",
     "public/Archive",
     "Archive/PageComponent.tsx",
-    "Archive/Bootstrap",
+    "Archive/styles",
     "Archive/Extra.tsx",
     "Archive/PlaceholderContainer.tsx"
   ]
